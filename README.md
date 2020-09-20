@@ -95,6 +95,20 @@ Basta rodar:
 
 # Mão na Massa
 
+# 1) Tipos
+
+Tipar variáveis é bem simples, como demonstrado no exemplo anterior basta que você adicione `:tipo` depois de uma variável. 
+
+Exemplos:
+
+```ts 
+let numero: number
+numero = 3
+
+let isTrue: boolean 
+isTrue = true
+```
+
 Para começar, vamos corrigir o exemplo da soma demonstrada no início desse artigo:
 
 ```ts
@@ -103,9 +117,30 @@ function soma(x: number, y: number) {
 }
 ```
 
-Adicionando `:number` na frente das variáveis o problema da concatenação já seria facilmente eliminado.
+Adicionando `:number` na frente das variáveis o problema da concatenação não desejada já seria facilmente eliminado.
 
-### Tipos (WIP)
+---
+
+Tipos em Typescript podem ser separados em algumas categorias, começando por tipos **básicos**:
+
+### Boolean 
+
+Aceita os valores `true` e `false` na tipagem `:boolean` 
+
+```ts 
+let checkTrue: boolean = false;
+```
+### Number 
+
+Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais usando a tipagem `:number` 
+
+```ts 
+let decimal: number = 6;
+let hexadecimal: number = 0xf00d;
+let binario: number = 0b1010;
+let octal: number = 0o744;
+let big: bigint = 100n;
+```
 
 # Como Contribuir com o 4noobs
 
