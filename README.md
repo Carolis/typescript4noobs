@@ -132,7 +132,7 @@ let checkTrue: boolean = false;
 ```
 ### Number 
 
-Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais. Sua tipagem é escrita como `:number` 
+Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais. Sua tipagem é escrita como `:number` ou `:bigInt`
 
 ```ts 
 let decimal: number = 6;
@@ -140,6 +140,19 @@ let hexadecimal: number = 0xf00d;
 let binario: number = 0b1010;
 let octal: number = 0o744;
 let big: bigint = 100n;
+```
+### String 
+
+Strings podem ser declaradas usando aspas simple e duplas como já conhecemos e também usando aspas invertidas para que algumas operações lógicas sejam inseridas dentro da variável. 
+
+ Sua tipagem é escrita como `:string`
+
+```ts 
+let frase1: string
+frase1 = "Eu amo geladeiras!" 
+
+let frase2: string
+frase2 = `Olá meu nome é ${meuNome} e eu terei ${idade + 1} anos no próximo mês`
 ```
 
 # Como Contribuir com o 4noobs
