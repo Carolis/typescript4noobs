@@ -125,14 +125,14 @@ Tipos em Typescript podem ser separados em algumas categorias, começando por ti
 
 ### Boolean 
 
-Aceita os valores `true` e `false` na tipagem `:boolean` 
+Aceita os valores `true` e `false`. Sua tipagem é escrita como `:boolean` 
 
 ```ts 
 let checkTrue: boolean = false;
 ```
 ### Number 
 
-Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais usando a tipagem `:number` 
+Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais. Sua tipagem é escrita como `:number` 
 
 ```ts 
 let decimal: number = 6;
