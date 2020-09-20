@@ -27,6 +27,8 @@ Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos 
 
 Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando.
 
+Você também poderá testar todos os exemplos citados nesse [playground online](https://www.typescriptlang.org/play) caso não queira baixar nada.
+
 ### O que é o Typescript?
 
 Typescript é considerado um **superset** da linguagem Javascript, dito isso, se você já sabe Javascript é muito fácil de começar a usá-lo já sabendo um pouco. 
@@ -69,6 +71,21 @@ A instalação em si é super simples e pode ser feita com apenas esse comando a
 Para checar a versão instalada basta rodar `tsc -v`, assim teremos segurança de que ele realmente foi instalado.
 
 Após instalado, é interessante rodarmos `tsc --init` no terminal para que um arquivo `tsconfig.json` seja gerado. Esse arquivo é responsável por ditar como o Typescript irá se comportar no projeto: para qual versão do Javascript ele vai compilar, quais diretórios ele deve jogar seus arquivos, se ele vai ser mais ou menos "chato" com os erros, etc.
+
+--- 
+
+### Extra: Instalação com Yarn
+
+Você também pode inicializar seu projeto Typescript usando o **Yarn** por questões de preferência.
+
+Basta rodar:
+
+`yarn init -y` para inicializar o Yarn em si no diretório
+
+`yarn add -D typescript` para instalar o Typescript
+
+`yarn tsc --init` para gerar o arquivo `tsconfig.json`
+
 
 # Mão na Massa
 
