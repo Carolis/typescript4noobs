@@ -31,6 +31,12 @@ Você também poderá testar todos os exemplos citados nesse [playground online]
 
 ### O que é o Typescript?
 
+<p align="center">
+  <a href="https://twitter.com/ianhunter/status/1258209274347638787" target="_blank">
+    <img src="./.github/images/Toy.png">
+  </a>
+</p>
+
 Typescript é considerado um **superset** da linguagem Javascript, dito isso, se você já sabe Javascript é muito fácil de começar a usá-lo já sabendo um pouco. 
 Ele tem como  principal funcionalidade a capacidade de adicionar **tipagens estáticas** ao código. 
 Um dos pontos positivos que vale a pena ser citado é a possibilidade de termos arquivos Typescript convivendo no mesmo projeto com arquivos Javascript já que no final das contas o Typescript é compilado para Javascript, ou seja, é uma ferramenta de **desenvolvimento**. Isso também permite que você adicione Typescript em qualquer momento do seu projeto, conforme necessidade e gosto pessoal.
