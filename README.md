@@ -80,9 +80,11 @@ function soma(x: number, y: number) {
 }
 ```
 
-Adicionando `:number` atrás das variáveis o problema da concatenação já seria facilmente eliminado.
+Adicionando `:number` na frente das variáveis o problema da concatenação já seria facilmente eliminado.
 
-## Como Contribuir
+### Tipos (WIP)
+
+# Como Contribuir com o 4noobs
 
 Contribuições fazem com que a comunidade open source seja um lugar incrível para aprender, inspirar e criar. Todas contribuições
 são **extremamente apreciadas**
@@ -93,7 +95,7 @@ são **extremamente apreciadas**
 4. Realize o Push no Branch (`git push origin feature/featureBraba`)
 5. Abra um Pull Request
 
-## Autores
+# Autores
 
 - **Carolina Ale** - _Developer & Member of He4rt Developers_  - [Twitter](https://twitter.com/caroliscaroles) - [Github](https://github.com/Carolis)
 
