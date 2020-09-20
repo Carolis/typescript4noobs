@@ -180,7 +180,10 @@ let minhaTupla: [string, number];
 minhaTupla = ["frase", 1];
 ```
 
-### Enum
+### Enum (W.I.P)
+
+O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade.
+
 
 # Como Contribuir com o 4noobs
 
