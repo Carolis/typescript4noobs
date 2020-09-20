@@ -97,7 +97,7 @@ Basta rodar:
 
 # 1) Tipos
 
-Tipar variáveis é bem simples, como demonstrado no exemplo anterior basta que você adicione `:tipo` depois de uma variável. 
+Tipar variáveis é bem simples, como demonstrado no exemplo abaixo basta que você adicione `:tipo` depois de uma variável. 
 
 Exemplos:
 
