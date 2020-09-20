@@ -143,7 +143,7 @@ let big: bigint = 100n;
 ```
 ### String 
 
-Strings podem ser declaradas usando aspas simple e duplas como já conhecemos e também usando aspas invertidas para que algumas operações lógicas sejam inseridas dentro da variável. 
+Strings podem ser declaradas usando aspas simples e duplas como já conhecemos e também usando aspas **invertidas** para que algumas operações lógicas sejam inseridas dentro da variável. 
 
  Sua tipagem é escrita como `:string`
 
@@ -152,8 +152,35 @@ let frase1: string
 frase1 = "Eu amo geladeiras!" 
 
 let frase2: string
-frase2 = `Olá meu nome é ${meuNome} e eu terei ${idade + 1} anos no próximo mês`
+frase2 = `Olá, meu nome é ${meuNome} e eu terei ${idade + 1} anos no próximo mês`
 ```
+### Array
+
+Arrays podem ser tipados de duas formas diferentes:
+
+```ts 
+let listaDeNumeros: number[] = [1, 2, 3];
+
+let listaDePalavras: string[] = ["maçã", "laranja", "banana"];
+```
+ou com a notação **Generics**
+
+```ts 
+let listaDeNumeros: Array<number> = [1, 2, 3];
+
+let listaDePalavras: Array<string> = ["maçã", "laranja", "banana"];
+```
+
+### Tupla
+
+Tuplas são bem parecidas com Arrays, a diferença é que sabemos previamente o qual será o tipo de cada elemento inserido ali dentro e eles podem ser diferentes entre si, por exemplo um par com uma string e um número como demonstrado abaixo:
+
+```ts 
+let minhaTupla: [string, number];
+minhaTupla = ["frase", 1];
+```
+
+### Enum
 
 # Como Contribuir com o 4noobs
 
