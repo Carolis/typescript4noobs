@@ -137,7 +137,7 @@ function resposta(): string {
 }
 ```
 
-Como demonstrado acima, tipar um retorno de função é parecido com tipar uma variável: apeanas coloque um `:tipo`, porém depois dos parênteses.
+Como demonstrado acima, tipar o retorno de uma função é parecido com tipar uma variável: apenas coloque um `:tipo`, porém depois dos parênteses.
 
 Caso o tipo retornado não correnponda com o tipo do retorno:
 
@@ -216,8 +216,8 @@ O tipo `void`, geralmente utilizado no retorno de funções, significa que uma f
 
 ```ts
 function lerArquivo(): void {
-  // ler o arqivo
-  // não eetorna nenhum valor
+  // ler o arquivo
+  // não retorna nenhum valor
 }
 ```
 
@@ -238,7 +238,7 @@ enum Direçao {
 }
 ```
 
-Seguindo a order, `Baixo == 2`, `Esquerda == 3`, etc...Nesse caso poderíamos declarar apenas as constantes, pois os valores inicais começam do 0.
+Seguindo a ordem, `Baixo == 2`, `Esquerda == 3`, etc...Nesse caso poderíamos declarar apenas as constantes, pois os valores inicais começam do 0.
 
 Segue mais um exemplo da utilização de um Enum Numérico:
 
@@ -255,7 +255,7 @@ function responda(remetente: string, menssagem: Resposta): void {
 
 ## Enums String
 
-Tambem é possível defirnir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremeto, logo, é necessário inicializar com um valor real, como:
+Tambem é possível definir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremeto, logo, é necessário inicializar com um valor real, como:
 
 ```ts
 enum Direcao {
@@ -268,7 +268,7 @@ enum Direcao {
 
 ## Enums Heterogêneos
 
-Enums podem possuir mais de um tipo, forma uma heterogeneidade:
+Enums podem possuir mais de um tipo, possuindo diferentes tipos:
 
 ```ts
 enum RespostaBooleana {
@@ -276,6 +276,8 @@ enum RespostaBooleana {
   Nao = 'NÃO'
 }
 ```
+
+entretanto, essa prática não é tão recomendada, inclsive pelo prórpio time do TypeScrit, pois não há muito significado em misturar os tipos de constantes.
 
 ## Enums com Expressões
 
