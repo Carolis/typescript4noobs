@@ -149,14 +149,15 @@ Caso o tipo retornado não correnponda com o tipo do retorno:
 
 Tipos em Typescript podem ser separados em algumas categorias, começando por tipos **básicos**:
 
-### Boolean
+## Boolean
 
 Aceita os valores `true` e `false`. Sua tipagem é escrita como `:boolean`
 
 ```ts
 let checkTrue: boolean = false;
 ```
-### Number
+
+## Number
 
 Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais. Sua tipagem é escrita como `:number` ou `:bigInt`
 
@@ -167,7 +168,8 @@ let binario: number = 0b1010;
 let octal: number = 0o744;
 let big: bigint = 100n;
 ```
-### String
+
+## String
 
 Strings podem ser declaradas usando aspas simples e duplas como já conhecemos e também usando aspas **invertidas** para que algumas operações lógicas sejam inseridas dentro da variável.
 
@@ -180,7 +182,8 @@ frase1 = "Eu amo geladeiras!"
 let frase2: string
 frase2 = `Olá, meu nome é ${meuNome} e eu terei ${idade + 1} anos no próximo mês`
 ```
-### Array
+
+## Array
 
 Arrays podem ser tipados de duas formas diferentes:
 
@@ -189,6 +192,7 @@ let listaDeNumeros: number[] = [1, 2, 3];
 
 let listaDePalavras: string[] = ["maçã", "laranja", "banana"];
 ```
+
 ou com a notação **Generics**
 
 ```ts
@@ -197,13 +201,24 @@ let listaDeNumeros: Array<number> = [1, 2, 3];
 let listaDePalavras: Array<string> = ["maçã", "laranja", "banana"];
 ```
 
-### Tupla
+## Tupla
 
 Tuplas são bem parecidas com Arrays, a diferença é que sabemos previamente o qual será o tipo de cada elemento inserido ali dentro e eles podem ser diferentes entre si, por exemplo um par com uma string e um número como demonstrado abaixo:
 
 ```ts
 let minhaTupla: [string, number];
 minhaTupla = ["frase", 1];
+```
+
+## Void
+
+O tipo `void`, geralmente utilizado no retorno de funções, significa que uma função não retorna nenhum valor em especifíco, ou seja, não retorna nada.
+
+```ts
+function lerArquivo(): void {
+  // ler o arqivo
+  // não eetorna nenhum valor
+}
 ```
 
 # 2) Enums
@@ -273,6 +288,78 @@ enum FileAccess {
   Write = 1 << 2,
   ReadWrite = Read | Write,
   G = "123".length
+}
+```
+
+# 3) Type e Interfaces
+
+Vimos que podemos usar os tipos naturais da linguagem, porém, e se quisermos ir além? Definir nossos próprios tipos,tipar objetos em uito mais?
+
+Não é só possível mas também é super simples, vejamos:
+
+## Type
+
+A forma mais simples de criar uma tipagem própria é com a palavra-chave `type`. Podemos usar o `type` como um apelido, assim como enums, porém não possuem auto-incremento:
+
+```ts
+type LadoQuadrado = number;
+```
+
+ou tipar objetos
+
+```ts
+type Triangulo = {
+  lado1: number;
+  lado2: number;
+  lado3: number;
+}
+```
+
+tambem podemos colocar funções nesses tipos, ou seja:
+
+```ts
+type Triangulo = {
+  lado1: number;
+  lado2: number;
+  lado3: number;
+
+  area(altura: number, base: number): number
+  // ou
+  area: (altura: number, base: number) => number
+}
+```
+
+Esse método permite usar constantes literais, como:
+
+```ts
+type Sim = 'sim'
+
+type Lado1 = 44.5;
+```
+
+## Interfaces
+
+Já as interfaces, são como os types, porém possuem algumas diferenças:
+
+* Interfaces podem ser extendidas;
+* Interfaces podem possuir interseções;
+
+Exemplos:
+
+```ts
+interface Pessoa {
+  altura: number;
+  falar(msg: string): string;
+}
+
+// essa interface criará uma interseção com a primeira
+// ou seja, a interface Pessoa é a junção da primeira com essa
+interface Pessoa {
+  andar(passos: number): string;
+}
+
+interface Programador extends Pessoa {
+  tomarCafe(): void;
 }
 ```
 
