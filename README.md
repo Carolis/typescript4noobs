@@ -284,11 +284,11 @@ entretanto, essa prática não é tão recomendada, inclsive pelo prórpio time 
 Numa inicialização de uma constante tambem permite-se o uso de expressões, como mostra o código a seguir:
 
 ```ts
-enum FileAccess {
-  None,
-  Read = 1 << 1,
-  Write = 1 << 2,
-  ReadWrite = Read | Write,
+enum AcessarArquivo {
+  Nada,
+  Ler = 1 << 1,
+  Escrever = 1 << 2,
+  EscreverELer = Read | Write,
   G = "123".length
 }
 ```
