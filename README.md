@@ -6,7 +6,7 @@
 
 <p align="center">
   <h2 align="center">Typescript4noobs</h2>
-  
+
   <p align="center">
     <a href="https://github.com/Carolis/typescript4noobs/issues">Report Bug</a>
     ·
@@ -16,16 +16,16 @@
 
 `Último update do projeto Typescript4noobs: 20/09/2020`
 
-[Link para a documentação Oficial do Typescript](https://www.typescriptlang.org/docs) 
+[Link para a documentação Oficial do Typescript](https://www.typescriptlang.org/docs)
 
 
 # Introdução
- 
-Avisos: 
+
+Avisos:
 
 Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos pelo projeto 4noobs, portanto, os exemplos aqui citados estarão preferencialmente inseridos nesse ecossistema.
 
-Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando.
+Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, já que possui uma ótima intergração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
 
 Você também poderá testar todos os exemplos citados nesse [playground online](https://www.typescriptlang.org/play) caso não queira baixar nada.
 
@@ -37,8 +37,8 @@ Você também poderá testar todos os exemplos citados nesse [playground online]
   </a>
 </p>
 
-Typescript é considerado um **superset** da linguagem Javascript, dito isso, se você já sabe Javascript é muito fácil de começar a usá-lo já sabendo um pouco. 
-Ele tem como  principal funcionalidade a capacidade de adicionar **tipagens estáticas** ao código. 
+Typescript é considerado um **superset** da linguagem Javascript, dito isso, se você já sabe Javascript é muito fácil de começar a usá-lo já sabendo um pouco.
+Ele tem como  principal funcionalidade a capacidade de adicionar **tipagens estáticas** ao código.
 Um dos pontos positivos que vale a pena ser citado é a possibilidade de termos arquivos Typescript convivendo no mesmo projeto com arquivos Javascript já que no final das contas o Typescript é compilado para Javascript, ou seja, é uma ferramenta de **desenvolvimento**. Isso também permite que você adicione Typescript em qualquer momento do seu projeto, conforme necessidade e gosto pessoal.
 
 ### Por que usar Typescript?
@@ -53,12 +53,12 @@ function soma(x, y) {
 
 Chamando a função `soma(2,2)` o retorno seria `4`;
 
-Chamando a função `soma('2','2')` o retorno seria `22`; 
+Chamando a função `soma('2','2')` o retorno seria `22`;
 
 Esse problema seria facilmente evitado ao tiparmos as variáveis corretamente como números.
 
 
---- 
+---
 
 Outra grande vantagem de usar o Typescript é o aumento da inteligência dentro do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)** e a possibilidade de usar **parâmetros opcionais**. Além disso, as tipagens podem funcionar como uma mini documentação dentro do seu arquivo, facilitando futuras manutenções e fazendo com que todos esses fatores tragam uma camada a mais de segurança para o código.
 
@@ -72,13 +72,13 @@ PS: antes de seguir com a instalação do typescript é importante ter o **node*
 
 A instalação em si é super simples e pode ser feita com apenas esse comando abaixo:
 
-`npm install -g typescript` 
+`npm install -g typescript`
 
 Para checar a versão instalada basta rodar `tsc -v`, assim teremos segurança de que ele realmente foi instalado.
 
 Após instalado, é interessante rodarmos `tsc --init` no terminal para que um arquivo `tsconfig.json` seja gerado. Esse arquivo é responsável por ditar como o Typescript irá se comportar no projeto: para qual versão do Javascript ele vai compilar, quais diretórios ele deve jogar seus arquivos, se ele vai ser mais ou menos "chato" com os erros, etc.
 
---- 
+---
 
 ### Extra: Instalação com Yarn
 
@@ -97,15 +97,15 @@ Basta rodar:
 
 # 1) Tipos
 
-Tipar variáveis é bem simples, como demonstrado no exemplo abaixo basta que você adicione `:tipo` depois de uma variável. 
+Tipar variáveis é bem simples, como demonstrado no exemplo abaixo basta que você adicione `:tipo` depois de uma variável.
 
 Exemplos:
 
-```ts 
+```ts
 let numero: number
 numero = 3
 
-let isTrue: boolean 
+let isTrue: boolean
 isTrue = true
 ```
 
@@ -119,37 +119,41 @@ function soma(x: number, y: number) {
 
 Adicionando `:number` na frente das variáveis o problema da concatenação não desejada já seria facilmente eliminado.
 
+<div align='center'>
+  <img src='./.github/images/soma.gif'/>
+</div>
+
 ---
 
 Tipos em Typescript podem ser separados em algumas categorias, começando por tipos **básicos**:
 
-### Boolean 
+### Boolean
 
-Aceita os valores `true` e `false`. Sua tipagem é escrita como `:boolean` 
+Aceita os valores `true` e `false`. Sua tipagem é escrita como `:boolean`
 
-```ts 
+```ts
 let checkTrue: boolean = false;
 ```
-### Number 
+### Number
 
 Você pode tipar praticamente qualquer tipo de número, sejam eles decimais, octais, binários ou hexadecimais. Sua tipagem é escrita como `:number` ou `:bigInt`
 
-```ts 
+```ts
 let decimal: number = 6;
 let hexadecimal: number = 0xf00d;
 let binario: number = 0b1010;
 let octal: number = 0o744;
 let big: bigint = 100n;
 ```
-### String 
+### String
 
-Strings podem ser declaradas usando aspas simples e duplas como já conhecemos e também usando aspas **invertidas** para que algumas operações lógicas sejam inseridas dentro da variável. 
+Strings podem ser declaradas usando aspas simples e duplas como já conhecemos e também usando aspas **invertidas** para que algumas operações lógicas sejam inseridas dentro da variável.
 
  Sua tipagem é escrita como `:string`
 
-```ts 
+```ts
 let frase1: string
-frase1 = "Eu amo geladeiras!" 
+frase1 = "Eu amo geladeiras!"
 
 let frase2: string
 frase2 = `Olá, meu nome é ${meuNome} e eu terei ${idade + 1} anos no próximo mês`
@@ -158,14 +162,14 @@ frase2 = `Olá, meu nome é ${meuNome} e eu terei ${idade + 1} anos no próximo 
 
 Arrays podem ser tipados de duas formas diferentes:
 
-```ts 
+```ts
 let listaDeNumeros: number[] = [1, 2, 3];
 
 let listaDePalavras: string[] = ["maçã", "laranja", "banana"];
 ```
 ou com a notação **Generics**
 
-```ts 
+```ts
 let listaDeNumeros: Array<number> = [1, 2, 3];
 
 let listaDePalavras: Array<string> = ["maçã", "laranja", "banana"];
@@ -175,15 +179,80 @@ let listaDePalavras: Array<string> = ["maçã", "laranja", "banana"];
 
 Tuplas são bem parecidas com Arrays, a diferença é que sabemos previamente o qual será o tipo de cada elemento inserido ali dentro e eles podem ser diferentes entre si, por exemplo um par com uma string e um número como demonstrado abaixo:
 
-```ts 
+```ts
 let minhaTupla: [string, number];
 minhaTupla = ["frase", 1];
 ```
 
-### Enum (W.I.P)
+# 2) Enums
 
-O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade.
+O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade, definindo constantes que podem ser usadas para melhorar a legilibilidade do código.
 
+## Enums Numéricos
+
+Esses enums serão incrementados conforme a primeira definição, exemplo:
+
+```ts
+enum Direçao {
+  Cima = 1,
+  Baixo,
+  Esquerda,
+  Direita
+}
+```
+
+Seguindo a order, `Baixo == 2`, `Esquerda == 3`, etc...Nesse caso poderíamos declarar apenas as constantes, pois os valores inicais começam do 0.
+
+Segue mais um exemplo da utilização de um Enum Numérico:
+
+```ts
+enum Resposta {
+  Sim = 1,
+  Nao = 0
+}
+
+function responda(remetente: string, menssagem: Resposta): void {
+  //...
+}
+```
+
+## Enums String
+
+Tambem é possível defirnir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremeto, logo, é necessário inicializar com um valor real, como:
+
+```ts
+enum Direcao {
+  Cima = 'CIMA',
+  Baixo = 'BAIXO',
+  Esquerda = 'ESQUERDA',
+  Direita = 'DIREITA'
+}
+```
+
+## Enums Heterogêneos
+
+Enums podem possuir mais de um tipo, forma uma heterogeneidade:
+
+```ts
+enum RespostaBooleana {
+  Sim = 1
+  Nao = 'NÃO'
+}
+```
+
+## Enums com Expressões
+
+Numa inicialização de uma constante tambem permite-se o uso de expressões, como mostra o código a seguir:
+
+```ts
+enum FileAccess {
+  None,
+  Read = 1 << 1,
+  Write = 1 << 2,
+  ReadWrite = Read | Write,
+  G = "123".length
+}
+```
 
 # Como Contribuir com o 4noobs
 
