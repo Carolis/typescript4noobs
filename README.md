@@ -137,7 +137,7 @@ function resposta(): string {
 }
 ```
 
-Como demonstrado acima, tipar um retorno de função é parecido com tipar uma variável: apeanas coloque um `:tipo`, porém depois dos parênteses.
+Como demonstrado acima, tipar o retorno de uma função é parecido com tipar uma variável: apenas coloque um `:tipo`, porém depois dos parênteses.
 
 Caso o tipo retornado não correnponda com o tipo do retorno:
 
@@ -216,8 +216,8 @@ O tipo `void`, geralmente utilizado no retorno de funções, significa que uma f
 
 ```ts
 function lerArquivo(): void {
-  // ler o arqivo
-  // não eetorna nenhum valor
+  // ler o arquivo
+  // não retorna nenhum valor
 }
 ```
 
@@ -238,7 +238,7 @@ enum Direçao {
 }
 ```
 
-Seguindo a order, `Baixo == 2`, `Esquerda == 3`, etc...Nesse caso poderíamos declarar apenas as constantes, pois os valores inicais começam do 0.
+Seguindo a ordem, `Baixo == 2`, `Esquerda == 3`, etc...Nesse caso poderíamos declarar apenas as constantes, pois os valores inicais começam do 0.
 
 Segue mais um exemplo da utilização de um Enum Numérico:
 
@@ -255,7 +255,7 @@ function responda(remetente: string, menssagem: Resposta): void {
 
 ## Enums String
 
-Tambem é possível defirnir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremeto, logo, é necessário inicializar com um valor real, como:
+Tambem é possível definir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremeto, logo, é necessário inicializar com um valor real, como:
 
 ```ts
 enum Direcao {
@@ -268,7 +268,7 @@ enum Direcao {
 
 ## Enums Heterogêneos
 
-Enums podem possuir mais de um tipo, forma uma heterogeneidade:
+Enums podem possuir mais de um tipo, possuindo diferentes tipos:
 
 ```ts
 enum RespostaBooleana {
@@ -277,29 +277,31 @@ enum RespostaBooleana {
 }
 ```
 
+entretanto, essa prática não é tão recomendada, inclsive pelo prórpio time do TypeScrit, pois não há muito significado em misturar os tipos de constantes.
+
 ## Enums com Expressões
 
 Numa inicialização de uma constante tambem permite-se o uso de expressões, como mostra o código a seguir:
 
 ```ts
-enum FileAccess {
-  None,
-  Read = 1 << 1,
-  Write = 1 << 2,
-  ReadWrite = Read | Write,
+enum AcessarArquivo {
+  Nada,
+  Ler = 1 << 1,
+  Escrever = 1 << 2,
+  EscreverELer = Read | Write,
   G = "123".length
 }
 ```
 
 # 3) Type e Interfaces
 
-Vimos que podemos usar os tipos naturais da linguagem, porém, e se quisermos ir além? Definir nossos próprios tipos,tipar objetos em uito mais?
+Vimos que podemos usar os tipos naturais da linguagem, porém, e se quisermos ir além? Definir nossos próprios tipos, tipar objetos e muito mais?
 
 Não é só possível mas também é super simples, vejamos:
 
 ## Type
 
-A forma mais simples de criar uma tipagem própria é com a palavra-chave `type`. Podemos usar o `type` como um apelido, assim como enums, porém não possuem auto-incremento:
+A forma mais simples de criar uma tipagem própria é com a palavra-chave `type`. Podemos usar o `type` como um apelido, assim como enums, porém esses não possuem auto-incremento:
 
 ```ts
 type LadoQuadrado = number;
@@ -313,9 +315,17 @@ type Triangulo = {
   lado2: number;
   lado3: number;
 }
+
+const triangulo: Triangulo = {
+  lado1: 3,
+  lado2: 4,
+  lado3: 5,
+};
 ```
 
-tambem podemos colocar funções nesses tipos, ou seja:
+caso um objeto de certo tipo não implemente corretamente o tipo definido, o compilador irá nos avisar.
+
+Tambem podemos colocar funções nesses tipos, ou seja:
 
 ```ts
 type Triangulo = {
@@ -323,18 +333,25 @@ type Triangulo = {
   lado2: number;
   lado3: number;
 
-  area(altura: number, base: number): number
+  area(altura: number, base: number): number;
   // ou
-  area: (altura: number, base: number) => number
+  area: (altura: number, base: number) => number;
 }
 ```
 
 Esse método permite usar constantes literais, como:
 
 ```ts
-type Sim = 'sim'
+type Sim = 'sim';
+
+let sim: Sim = 'sim';
+// ERRO
+sim = 'meu nome';
 
 type Lado1 = 44.5;
+let lado1: Lado1 = 44.5;
+// O compilador aceita, porém não é recomendável
+lado1 += 2;
 ```
 
 ## Interfaces
@@ -342,7 +359,7 @@ type Lado1 = 44.5;
 Já as interfaces, são como os types, porém possuem algumas diferenças:
 
 * Interfaces podem ser extendidas;
-* Interfaces podem possuir interseções;
+* Interfaces podem ser unificadas;
 
 Exemplos:
 
@@ -358,6 +375,7 @@ interface Pessoa {
   andar(passos: number): string;
 }
 
+// possui todos os métodos e atributos de Pessoa
 interface Programador extends Pessoa {
   tomarCafe(): void;
 }
