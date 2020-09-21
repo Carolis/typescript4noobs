@@ -125,6 +125,28 @@ Adicionando `:number` na frente das variáveis o problema da concatenação não
 
 ---
 
+Mas você já pensou em tipar uma função? Bem, não é exatamente isso, mas em TypeScript é possível tipar o retorno de uma função!
+
+Isso permite ter a segurança que uma função irá retornar determinado tipo, por exemplo:
+
+```ts
+const somar10 = (n: number): number => n + 10;
+
+function resposta(): string {
+  return 'sim!';
+}
+```
+
+Como demonstrado acima, tipar um retorno de função é parecido com tipar uma variável: apeanas coloque um `:tipo`, porém depois dos parênteses.
+
+Caso o tipo retornado não correnponda com o tipo do retorno:
+
+<div align='center'>
+  <img src='./.github/images/retorno-funcao.gif'/>
+</div>
+
+---
+
 Tipos em Typescript podem ser separados em algumas categorias, começando por tipos **básicos**:
 
 ### Boolean
