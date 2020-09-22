@@ -139,7 +139,7 @@ function resposta(): string {
 
 Como demonstrado acima, tipar o retorno de uma função é parecido com tipar uma variável: apenas coloque um `:tipo`, porém depois dos parênteses.
 
-Caso o tipo retornado não correnponda com o tipo do retorno:
+Caso o tipo retornado não corresponda com o tipo do retorno:
 
 <div align='center'>
   <img src='./.github/images/retorno-funcao.gif'/>
@@ -266,19 +266,6 @@ enum Direcao {
 }
 ```
 
-## Enums Heterogêneos
-
-Enums podem possuir mais de um tipo, possuindo diferentes tipos:
-
-```ts
-enum RespostaBooleana {
-  Sim = 1
-  Nao = 'NÃO'
-}
-```
-
-entretanto, essa prática não é tão recomendada, inclsive pelo prórpio time do TypeScrit, pois não há muito significado em misturar os tipos de constantes.
-
 ## Enums com Expressões
 
 Numa inicialização de uma constante tambem permite-se o uso de expressões, como mostra o código a seguir:
@@ -288,7 +275,7 @@ enum AcessarArquivo {
   Nada,
   Ler = 1 << 1,
   Escrever = 1 << 2,
-  EscreverELer = Read | Write,
+  EscreverELer = Ler | Escrever,
   G = "123".length
 }
 ```
