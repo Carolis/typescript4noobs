@@ -25,9 +25,9 @@ Avisos:
 
 Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos pelo projeto 4noobs, portanto, os exemplos aqui citados estarão preferencialmente inseridos nesse ecossistema.
 
-Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, já que possui uma ótima intergração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
+Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, que possui uma ótima integração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
 
-Você também poderá testar todos os exemplos citados nesse [playground online](https://www.typescriptlang.org/play) caso não queira baixar nada.
+Todos os exemplos citados nesse artigo podem ser testados no [playground online oficial](https://www.typescriptlang.org/play) caso não queira baixar nada.
 
 ### O que é o Typescript?
 
@@ -323,6 +323,13 @@ type Triangulo = {
   area(altura: number, base: number): number;
   // ou
   area: (altura: number, base: number) => number;
+
+enum AcessarArquivo {
+  Nada,
+  Ler = 1 << 1,
+  Escrever = 1 << 2,
+  EscreverELer = Ler | Escrever,
+  G = "123".length
 }
 ```
 
