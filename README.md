@@ -149,6 +149,20 @@ Caso o tipo retornado não corresponda com o tipo do retorno:
 
 Tipos em Typescript podem ser separados em algumas categorias, começando por tipos **básicos**:
 
+## Any
+
+O tipo Any pode ser, como o nome sugere, qualquer coisa. Recomenda-se **evitar** ao máximo o uso desse tipo já que no final das contas usá-lo seria o mesmo que não usar Typescript.
+
+Vale lembrar que é possível configurar seu tsconfig para que seu código não aceite tipagens com `any` para uma maior segurança. 
+
+```ts
+let qualquerCoisa
+qualquerCoisa = 1
+qualquerCoisa = "Qualquer coisa"
+qualquerCoisa = [coisa1, coisa2]
+
+```
+
 ## Boolean
 
 Aceita os valores `true` e `false`. Sua tipagem é escrita como `:boolean`
