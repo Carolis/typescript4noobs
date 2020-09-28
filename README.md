@@ -280,6 +280,103 @@ enum AcessarArquivo {
 }
 ```
 
+# 3) Type e Interfaces
+
+Vimos que podemos usar os tipos naturais da linguagem, porém, e se quisermos ir além? Definir nossos próprios tipos, tipar objetos e muito mais?
+
+Não é só possível mas também é super simples, vejamos:
+
+## Type
+
+A forma mais simples de criar uma tipagem própria é com a palavra-chave `type`. Podemos usar o `type` como um apelido, assim como enums, porém esses não possuem auto-incremento:
+
+```ts
+type LadoQuadrado = number;
+```
+
+ou tipar objetos
+
+```ts
+type Triangulo = {
+  lado1: number;
+  lado2: number;
+  lado3: number;
+}
+
+const triangulo: Triangulo = {
+  lado1: 3,
+  lado2: 4,
+  lado3: 5,
+};
+```
+
+caso um objeto de certo tipo não implemente corretamente o tipo definido, o compilador irá nos avisar.
+
+Tambem podemos colocar funções nesses tipos, ou seja:
+
+```ts
+type Triangulo = {
+  lado1: number;
+  lado2: number;
+  lado3: number;
+
+  area(altura: number, base: number): number;
+  // ou
+  area: (altura: number, base: number) => number;
+
+enum AcessarArquivo {
+  Nada,
+  Ler = 1 << 1,
+  Escrever = 1 << 2,
+  EscreverELer = Ler | Escrever,
+  G = "123".length
+}
+```
+
+Esse método permite usar constantes literais, como:
+
+```ts
+type Sim = 'sim';
+
+let sim: Sim = 'sim';
+// ERRO
+sim = 'meu nome';
+
+type Lado1 = 44.5;
+let lado1: Lado1 = 44.5;
+// O compilador aceita, porém não é recomendável
+lado1 += 2;
+```
+
+## Interfaces
+
+Já as interfaces, são como os types, porém possuem algumas diferenças:
+
+* Interfaces podem ser extendidas;
+* Interfaces podem ser unificadas;
+
+Exemplos:
+
+```ts
+interface Pessoa {
+  altura: number;
+  falar(msg: string): string;
+}
+
+// essa interface criará uma interseção com a primeira
+// ou seja, a interface Pessoa é a junção da primeira com essa
+interface Pessoa {
+  andar(passos: number): string;
+}
+
+// possui todos os métodos e atributos de Pessoa
+interface Programador extends Pessoa {
+  tomarCafe(): void;
+}
+```
+
+# 4) Union Types (W.I.P)
+
 # Como Contribuir com o 4noobs
 
 Contribuições fazem com que a comunidade open source seja um lugar incrível para aprender, inspirar e criar. Todas contribuições
