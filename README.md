@@ -248,7 +248,7 @@ function error(): never {
 
 ## Object
 
-Podemos encaixar aqui todos os outros tipos que não consideramos **primitivos** (number, string, boolean, bigint, symbol, null, or undefined são considerados tipos primitivos).
+Podemos encaixar aqui todos os outros tipos que não consideramos **primitivos** (number, string, boolean, bigint, symbol, null, ou undefined são considerados tipos primitivos).
 
 ```ts
 let meuObjeto: object;
@@ -317,7 +317,7 @@ enum AcessarArquivo {
 }
 ```
 
-# 3) Type e Interfaces
+## Type e Interfaces
 
 Vimos que podemos usar os tipos naturais da linguagem, porém, e se quisermos ir além? Definir nossos próprios tipos, tipar objetos e muito mais?
 
@@ -387,14 +387,29 @@ lado1 += 2;
 
 ## Interfaces
 
-Já as interfaces, são como os types, porém possuem algumas diferenças:
+Interfaces são muito úteis quando queremos descrever um objeto. São parecidas com os types, porém possuem algumas diferenças, podendo ser por exemplo extendidas.
 
-* Interfaces podem ser extendidas;
-* Interfaces podem ser unificadas;
+Algo muito interessante de se citar é a possibilidade de definirmos propriedades opcionais através do símbolo de `?`.
 
 Exemplos:
 
 ```ts
+
+//declarando a interface Geladeira
+interface Geladeira {
+  nome: string;
+  descricao: string;
+  modelo: string;
+  funcionalidades?: string[]; // o símbolo de  "?" demonstra que essa é uma propriedade OPCIONAL
+}
+
+//declarando um objeto do tipo Geladeira 
+const Brastemp: Geladeira {
+  nome: "Brastemp Frost Free",
+  descricao: "Geladeira bonita",
+  modelo: "1231XHDDH"
+}
+
 interface Pessoa {
   altura: number;
   falar(msg: string): string;
@@ -411,8 +426,6 @@ interface Programador extends Pessoa {
   tomarCafe(): void;
 }
 ```
-
-# 4) Union Types (W.I.P)
 
 # Como Contribuir com o 4noobs
 
