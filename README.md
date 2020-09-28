@@ -226,7 +226,7 @@ minhaTupla = ["frase", 1];
 
 ## Void
 
-O tipo `void`, geralmente utilizado no retorno de funções, significa que uma função não retorna nenhum valor em especifíco, ou seja, não retorna nada.
+O tipo `void`, geralmente utilizado no retorno de funções, significa que uma função não retorna nenhum valor em especifíco, ou seja, não retorna nada. Pode ser considerado o oposto do tipo `any`.
 
 ```ts
 function lerArquivo(): void {
