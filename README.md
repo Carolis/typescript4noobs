@@ -235,7 +235,30 @@ function lerArquivo(): void {
 }
 ```
 
-# 2) Enums
+## Never
+
+Especialmente útil no gerenciamento de erros o tipo `never` serve para criarmos exceções que nunca irão retornar nada.
+
+```ts
+function error(): never {
+  throw new Error("errrouuuu");
+}
+
+```
+
+## Object
+
+Podemos encaixar aqui todos os outros tipos que não consideramos **primitivos** (number, string, boolean, bigint, symbol, null, or undefined são considerados tipos primitivos).
+
+```ts
+let meuObjeto: object;
+
+meuObjeto = {
+  caracteristica1: "quadrado"
+}
+```
+
+## Enums
 
 O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade, definindo constantes que podem ser usadas para melhorar a legilibilidade do código.
 
