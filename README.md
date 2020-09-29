@@ -426,6 +426,29 @@ interface Programador extends Pessoa {
   tomarCafe(): void;
 }
 ```
+## Typescript + React
+
+É possível inicializar um projeto react com um template para typescript de várias formas, uma delas se utilizando do create-react-app específico para o typescript, usando os seguintes comandos:
+
+`yarn create react-app my-app --template typescript` ou `npx create-react-app my-app --template typescript` 
+
+Exemplo de como fica um componente funcional com typescript: 
+
+```ts
+import React, { FunctionComponent, useState } from 'react'
+
+interface Props {
+  message: string
+}
+
+const App: FunctionComponent<Props> = props => {
+  const [hasMessage, setHasMessage] = useState<boolean>(false)
+  return <p>{hasMessage ? props.message : 'Default Message'}</p>
+}
+
+export default App
+```
+
 
 # Como Contribuir com o 4noobs
 
