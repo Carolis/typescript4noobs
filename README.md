@@ -95,7 +95,7 @@ Basta rodar:
 
 # Mão na Massa
 
-# 1) Tipos
+# Tipos
 
 Tipar variáveis é bem simples, como demonstrado no exemplo abaixo basta que você adicione `:tipo` depois de uma variável.
 
