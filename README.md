@@ -425,12 +425,9 @@ interface Pessoa {
 interface Programador extends Pessoa {
   tomarCafe(): void;
 }
-```
 
-### Pick<T, K>
-Quando queremos pegar algumas propriedades K de uma interface T podemos utilizar o Pick:
+// Quando queremos pegar algumas propriedades K de uma interface T podemos utilizar o Pick:
 
-```ts
 interface Veiculo {
     descricao: string;
     marca: string; 
@@ -444,6 +441,7 @@ const minhaBike: Bicicleta = {
     descricao: 'Bike que ganhei de presente',
     marca: 'Monark'
 };
+
 ```
 
 ## Typescript + React
