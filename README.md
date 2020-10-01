@@ -425,12 +425,9 @@ interface Pessoa {
 interface Programador extends Pessoa {
   tomarCafe(): void;
 }
-```
 
-### Omit<T, K>
-Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
+// Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
 
-```ts
 interface Veiculo {
     descricao: string;
     marca: string; 
@@ -444,9 +441,8 @@ const minhaBike: Bicicleta = {
     descricao: 'Bike que ganhei de presente',
     marca: 'Monark'
 };
+
 ```
-
-
 ## Typescript + React
 
 É possível inicializar um projeto react com um template para typescript de várias formas, uma delas se utilizando do create-react-app específico para o typescript, usando os seguintes comandos:
