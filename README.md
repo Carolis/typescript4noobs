@@ -426,8 +426,7 @@ interface Programador extends Pessoa {
   tomarCafe(): void;
 }
 
-// Quando queremos pegar algumas propriedades K de uma interface T podemos utilizar o Pick:
-
+// Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
 interface Veiculo {
     descricao: string;
     marca: string; 
@@ -435,10 +434,18 @@ interface Veiculo {
     portas: number;
 }
 
-type Bicicleta = Pick<Veiculo, 'descricao' | 'marca'>;
+type Bicicleta = Omit<Veiculo, 'motor' | 'portas'>;
 
 const minhaBike: Bicicleta = {
     descricao: 'Bike que ganhei de presente',
+    marca: 'Monark'
+};
+
+// e quando queremos pegar algumas propriedades K de uma interface T podemos utilizar o Pick:
+type BicicletaComPick = Pick<Veiculo, 'descricao' | 'marca'>;
+
+const minhaSegundaBike: BicicletaComPick = {
+    descricao: 'Bike que comprei',
     marca: 'Monark'
 };
 
