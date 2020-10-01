@@ -428,7 +428,7 @@ interface Programador extends Pessoa {
 ```
 
 ### Omit<T, K>
-Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit
+Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
 
 ```ts
 interface Veiculo {
