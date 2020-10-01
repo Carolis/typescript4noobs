@@ -425,6 +425,23 @@ interface Pessoa {
 interface Programador extends Pessoa {
   tomarCafe(): void;
 }
+
+// Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
+
+interface Veiculo {
+    descricao: string;
+    marca: string; 
+    motor: string;
+    portas: number;
+}
+
+type Bicicleta = Omit<Veiculo, 'motor' | 'portas'>;
+
+const minhaBike: Bicicleta = {
+    descricao: 'Bike que ganhei de presente',
+    marca: 'Monark'
+};
+
 ```
 ## Typescript + React
 
