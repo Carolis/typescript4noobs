@@ -425,7 +425,24 @@ interface Pessoa {
 interface Programador extends Pessoa {
   tomarCafe(): void;
 }
+
+// utilizamos readonly para propriedades que são apenas para leitura
+// elas disparam erro quando se tenta atualizá-las após definida
+
+interface Identidade {
+	readonly rg: string;
+        emissor: string;
+}
+
+const minhaIdentidade: Identidade = {
+	rg: "0123456789",
+        emissor: "SSP"
+}
+
+minhaIdentidade.emissor = "CREA";
+minhaIdentidade.rg = "9876543210" // dispara erro
 ```
+
 ## Typescript + React
 
 É possível inicializar um projeto react com um template para typescript de várias formas, uma delas se utilizando do create-react-app específico para o typescript, usando os seguintes comandos:
