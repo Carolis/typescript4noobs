@@ -426,6 +426,22 @@ interface Programador extends Pessoa {
   tomarCafe(): void;
 }
 
+// utilizamos readonly para propriedades que são apenas para leitura
+// elas disparam erro quando se tenta atualizá-las após definida
+
+interface Identidade {
+	readonly rg: string;
+        emissor: string;
+}
+
+const minhaIdentidade: Identidade = {
+	rg: "0123456789",
+        emissor: "SSP"
+}
+
+minhaIdentidade.emissor = "CREA";
+minhaIdentidade.rg = "9876543210" // dispara erro
+
 // Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
 interface Veiculo {
     descricao: string;
