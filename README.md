@@ -427,7 +427,6 @@ interface Programador extends Pessoa {
 }
 
 // Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
-
 interface Veiculo {
     descricao: string;
     marca: string; 
@@ -442,7 +441,16 @@ const minhaBike: Bicicleta = {
     marca: 'Monark'
 };
 
+// e quando queremos pegar algumas propriedades K de uma interface T podemos utilizar o Pick:
+type BicicletaComPick = Pick<Veiculo, 'descricao' | 'marca'>;
+
+const minhaSegundaBike: BicicletaComPick = {
+    descricao: 'Bike que comprei',
+    marca: 'Monark'
+};
+
 ```
+
 ## Typescript + React
 
 É possível inicializar um projeto react com um template para typescript de várias formas, uma delas se utilizando do create-react-app específico para o typescript, usando os seguintes comandos:
