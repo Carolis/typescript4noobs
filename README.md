@@ -42,13 +42,13 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 
 ### Conteúdo Principal
 
-[Introdução à Tipagem de Variáveis](/Content/3-Conteudo-Principal/Tipando-Variaveis.md)
+1. [Introdução à Tipagem de Variáveis](/Content/3-Conteudo-Principal/Tipando-Variaveis.md)
 
-[Tipos mais Comuns](/Content/3-Conteudo-Principal/Tipos-Comuns.md)
+2. [Tipos mais Comuns](/Content/3-Conteudo-Principal/Tipos-Comuns.md)
 
-[Enums](/Content/3-Conteudo-Principal/Enums.md)
+3. [Enums](/Content/3-Conteudo-Principal/Enums.md)
 
-[Type e Interfaces](/Content/3-Conteudo-Principal/Type-e-Interfaces.md)
+4. [Type e Interfaces](/Content/3-Conteudo-Principal/Type-e-Interfaces.md)
 
 
 # Como Contribuir com o 4noobs
