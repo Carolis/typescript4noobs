@@ -5,9 +5,7 @@
 </p>
 
 <p align="center">
-  <h2 align="center">Typescript4noobs</h2>
-
-  --- 
+  <h2 align="center">Typescript4noobs</h2> 
 
   <h1 align="center"><img src="./.github/images/Typescript_logo_2020.png" alt="Logo do Typescript" width="120"></h1>
 
