@@ -32,7 +32,6 @@ Chamando a função `soma('2','2')` o retorno seria `22`;
 
 Esse problema seria facilmente evitado ao tiparmos as variáveis corretamente como números.
 
-
 ---
 
 Outra grande vantagem de usar o Typescript é o aumento da inteligência dentro do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)** e a possibilidade de usar **parâmetros opcionais**. Além disso, as tipagens podem funcionar como uma mini documentação dentro do seu arquivo, facilitando futuras manutenções e fazendo com que todos esses fatores tragam uma camada a mais de segurança para o código.
