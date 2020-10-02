@@ -49,4 +49,3 @@ Caso o tipo retornado não corresponda com o tipo do retorno:
 </div>
 
 Dessa forma seremos alertados com um erro.
----
