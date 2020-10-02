@@ -7,17 +7,30 @@
 <p align="center">
   <h2 align="center">Typescript4noobs</h2>
 
-  <p align="center">
+  --- 
+
+  <h1 align="center"><img src="./.github/images/Typescript_logo_2020.png" alt="Logo do Typescript" width="120"></h1>
+
+  <p align="center">    
+    <br />
+    <a href="https://www.typescriptlang.org/docs"><strong>Explore a documentação »</strong></a>
+    <br />
+    <br />
     <a href="https://github.com/Carolis/typescript4noobs/issues">Report Bug</a>
     ·
     <a href="https://github.com/Carolis/typescript4noobs/issues">Request Feature</a>
   </p>
 </p>
 
-`Último update do projeto Typescript4noobs: 20/09/2020`
+# Sobre o Projeto
 
-[Link para a documentação Oficial do Typescript](https://www.typescriptlang.org/docs)
+Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos pelo projeto 4noobs, portanto, os exemplos aqui citados estarão preferencialmente inseridos nesse ecossistema.
 
+Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, que possui uma ótima integração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
+
+Todos os exemplos citados nesse artigo podem ser testados no [playground online oficial](https://www.typescriptlang.org/play) caso não queira baixar nada.
+
+# Roadmap
 
 # Introdução
 
