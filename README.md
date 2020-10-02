@@ -26,84 +26,13 @@
 
 Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos pelo projeto 4noobs, portanto, os exemplos aqui citados estarão preferencialmente inseridos nesse ecossistema.
 
+O material é pensado para que você consiga dar um pontapé inicial no seu projeto se utilizando de um ambiente preparado para o Typescript. Se você sentir falta ou necessidade de algum conteúdo sinta-se livre para abrir uma issue sinalizando isso.
+
 Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, que possui uma ótima integração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
 
 Todos os exemplos citados nesse artigo podem ser testados no [playground online oficial](https://www.typescriptlang.org/play) caso não queira baixar nada.
 
 # Roadmap
-
-# Introdução
-
-Avisos:
-
-Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos pelo projeto 4noobs, portanto, os exemplos aqui citados estarão preferencialmente inseridos nesse ecossistema.
-
-Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, que possui uma ótima integração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
-
-Todos os exemplos citados nesse artigo podem ser testados no [playground online oficial](https://www.typescriptlang.org/play) caso não queira baixar nada.
-
-### O que é o Typescript?
-
-<p align="center">
-  <a href="https://twitter.com/ianhunter/status/1258209274347638787" target="_blank">
-    <img src="./.github/images/Toy.png">
-  </a>
-</p>
-
-Typescript é considerado um **superset** da linguagem Javascript, dito isso, se você já sabe Javascript é muito fácil de começar a usá-lo já sabendo um pouco.
-Ele tem como  principal funcionalidade a capacidade de adicionar **tipagens estáticas** ao código.
-Um dos pontos positivos que vale a pena ser citado é a possibilidade de termos arquivos Typescript convivendo no mesmo projeto com arquivos Javascript já que no final das contas o Typescript é compilado para Javascript, ou seja, é uma ferramenta de **desenvolvimento**. Isso também permite que você adicione Typescript em qualquer momento do seu projeto, conforme necessidade e gosto pessoal.
-
-### Por que usar Typescript?
-
-O uso de Typescript traz segurança principalmente na detecção de **erros inesperados**. Um exemplo clássico seria o problema do operador `+` do Javascript que, dada uma soma com tipagens erradas poderia retornar erroneamente uma **concatenação** ao invés da soma propriamente dita.
-
-```ts
-function soma(x, y) {
-    return x + y;
-}
-```
-
-Chamando a função `soma(2,2)` o retorno seria `4`;
-
-Chamando a função `soma('2','2')` o retorno seria `22`;
-
-Esse problema seria facilmente evitado ao tiparmos as variáveis corretamente como números.
-
-
----
-
-Outra grande vantagem de usar o Typescript é o aumento da inteligência dentro do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)** e a possibilidade de usar **parâmetros opcionais**. Além disso, as tipagens podem funcionar como uma mini documentação dentro do seu arquivo, facilitando futuras manutenções e fazendo com que todos esses fatores tragam uma camada a mais de segurança para o código.
-
-### Por que não usar apenas PropTypes?
-
-O PropTypes funciona de uma forma muito mais passiva dentro de um projeto, sendo passível de ser facilmente ignorado, o que não é o caso do Typescript que desfruta de uma série de ferramentas e arquivos de configuração (`tsconfig.json`) para que você faça ele se comportar de uma forma mais ativa impedindo que você dê continuidade à execução ao se deparar com um erro.
-
-# Instalando o Typescript
-
-PS: antes de seguir com a instalação do typescript é importante ter o **node** previamente instalado.
-
-A instalação em si é super simples e pode ser feita com apenas esse comando abaixo:
-
-`npm install -g typescript`
-
-Para checar a versão instalada basta rodar `tsc -v`, assim teremos segurança de que ele realmente foi instalado.
-
-Após instalado, é interessante rodarmos `tsc --init` no terminal para que um arquivo `tsconfig.json` seja gerado. Esse arquivo é responsável por ditar como o Typescript irá se comportar no projeto: para qual versão do Javascript ele vai compilar, quais diretórios ele deve jogar seus arquivos, se ele vai ser mais ou menos "chato" com os erros, etc.
-
----
-
-### Extra: Instalação com Yarn
-
-Você também pode inicializar seu projeto Typescript usando o **Yarn** por questões de preferência.
-
-Basta rodar:
-
-`yarn init -y` para inicializar o Yarn em si no diretório
-
-`yarn add -D typescript` para instalar o Typescript
-
-`yarn tsc --init` para gerar o arquivo `tsconfig.json`
 
 
 # Mão na Massa
@@ -479,30 +408,6 @@ const minhaSegundaBike: BicicletaComPick = {
 };
 
 ```
-
-## Typescript + React
-
-É possível inicializar um projeto react com um template para typescript de várias formas, uma delas se utilizando do create-react-app específico para o typescript, usando os seguintes comandos:
-
-`yarn create react-app my-app --template typescript` ou `npx create-react-app my-app --template typescript` 
-
-Exemplo de como fica um componente funcional com typescript: 
-
-```ts
-import React, { FunctionComponent, useState } from 'react'
-
-interface Props {
-  message: string
-}
-
-const App: FunctionComponent<Props> = props => {
-  const [hasMessage, setHasMessage] = useState<boolean>(false)
-  return <p>{hasMessage ? props.message : 'Default Message'}</p>
-}
-
-export default App
-```
-
 
 # Como Contribuir com o 4noobs
 
