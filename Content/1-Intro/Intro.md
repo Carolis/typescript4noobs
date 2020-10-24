@@ -38,4 +38,62 @@ Outra grande vantagem de usar o Typescript é o aumento da inteligência dentro 
 
 ### Por que não usar apenas PropTypes?
 
-O PropTypes funciona de uma forma muito mais passiva dentro de um projeto, sendo passível de ser facilmente ignorado, o que não é o caso do Typescript que desfruta de uma série de ferramentas e arquivos de configuração (`tsconfig.json`) para que você faça ele se comportar de uma forma mais ativa impedindo que você dê continuidade à execução ao se deparar com um erro.
+Apesar de ser considerado uma alterativa ao TypeScript, o PropTypes é uma biblioteca que só faz a checagem de tipos em _props_ de componentes **React.js**. Isso torna muito difícil a comparação com o TypeScript que, por ser um _superset_ do JavaScript, adiciona recursos a linguagem e conta uma checagem de tipos muito mais poderosa, onde podemos checar das variáveis, aos objetos, funções, classes etc.
+
+Porém se desconsiderarmos as limitações do PropTypes, existem outras diferenças importantes. Como:
+1. O momento em que a checagem de tipos acontece;
+2. A severidade com que os erros são tratados;
+3. A forma como declaramos os estruturas/esquemas com os tipos;
+
+O PropTypes faz a checagem de tipos em tempo de execução (quando a aplicação está _rodando_, sendo executada) e os erros são tratados apenas como alertas (_warnings_). Isso torna a checagem de tipos passíva e fácil de ser ignorada pelo desenvolvedor, o que pode resultar em falhas e _bugs_. Enquanto no TypeScript a checagem de tipos acontece em tempo de compilação (quando o código-fonte em TypeScript é compilado para JavaScript) e é possível configurar no `tsconfig.json` o comportamento em caso de erros, se mais permissivo ou menos dependendo do projeto.
+
+No PropTypes contratos (estruturas/esquemas com os tipos) das _props_ de um componente **React.js** são declarados usando um objeto, que é atribuído a propriedade estática `propTypes` e usa propriedades e métodos exportados pela biblioteca `prop-types`. Esses objetos acabam tendo um impacto na performance e no tamanho da aplicação. Enquanto no TypeScript usamos `type` ou `interface` para declarar os contratos de objetos, e isso também vale para _props_ de componentes **React.js**. Ao compilar para JavaScript esses tipos e interfaces são simplesmente omitidos e não tem impacto na performance ou no tamanho da aplicação.
+
+<table>
+<thead>
+<tr>
+<th>
+PropTypes
+</th>
+<th>
+TypeScript
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+```js
+import PropTypes from 'prop-types';
+
+function Button(props) {
+  // ...
+}
+
+Button.propTypes = {
+  type: PropTypes.oneOf(
+    ['button', 'reset', 'submit']
+  ).isRequired,
+  text: PropTypes.string.isRequired
+};
+```
+
+</td>
+<td>
+
+```ts
+type Props = {
+  type: 'button' | 'reset' | 'submit';
+  text: string;
+};
+
+function Button(props: Props) {
+  // ...
+}
+```
+
+</td>
+</tr>
+</tbody>
+</table>
