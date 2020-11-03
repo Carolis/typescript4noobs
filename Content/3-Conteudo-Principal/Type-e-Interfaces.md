@@ -28,9 +28,9 @@ const triangulo: Triangulo = {
 };
 ```
 
-caso um objeto de certo tipo não implemente corretamente o tipo definido, o compilador irá nos avisar.
+Caso um objeto de certo tipo não implemente corretamente o tipo definido, o compilador irá nos avisar.
 
-Tambem podemos colocar funções nesses tipos, ou seja:
+Também podemos colocar funções nesses tipos, ou seja:
 
 ```ts
 type Triangulo = {
@@ -68,23 +68,22 @@ lado1 += 2;
 
 ## Interfaces
 
-Interfaces são muito úteis quando queremos descrever um objeto. São parecidas com os types, porém possuem algumas diferenças, podendo ser por exemplo extendidas.
+Interfaces são muito úteis quando queremos descrever um objeto. São parecidas com os types, porém possuem algumas diferenças, podendo ser por exemplo estendidas.
 
 Algo muito interessante de se citar é a possibilidade de definirmos propriedades opcionais através do símbolo de `?`.
 
 Exemplos:
 
 ```ts
-
-//declarando a interface Geladeira
+// declarando a interface Geladeira
 interface Geladeira {
   nome: string;
   descricao: string;
   modelo: string;
-  funcionalidades?: string[]; // o símbolo de  "?" demonstra que essa é uma propriedade OPCIONAL
+  funcionalidades?: string[]; // o símbolo de "?" demonstra que essa é uma propriedade OPCIONAL
 }
 
-//declarando um objeto do tipo Geladeira 
+// declarando um objeto do tipo Geladeira 
 const Brastemp: Geladeira {
   nome: "Brastemp Frost Free",
   descricao: "Geladeira bonita",
@@ -112,12 +111,12 @@ interface Programador extends Pessoa {
 
 interface Identidade {
 	readonly rg: string;
-        emissor: string;
+  emissor: string;
 }
 
 const minhaIdentidade: Identidade = {
 	rg: "0123456789",
-        emissor: "SSP"
+  emissor: "SSP"
 }
 
 minhaIdentidade.emissor = "CREA";
@@ -125,25 +124,25 @@ minhaIdentidade.rg = "9876543210" // dispara erro
 
 // Quando queremos omitir algumas propriedades K de uma interface T podemos utilizar o Omit:
 interface Veiculo {
-    descricao: string;
-    marca: string; 
-    motor: string;
-    portas: number;
+  descricao: string;
+  marca: string; 
+  motor: string;
+  portas: number;
 }
 
 type Bicicleta = Omit<Veiculo, 'motor' | 'portas'>;
 
 const minhaBike: Bicicleta = {
-    descricao: 'Bike que ganhei de presente',
-    marca: 'Monark'
+  descricao: 'Bike que ganhei de presente',
+  marca: 'Monark'
 };
 
 // e quando queremos pegar algumas propriedades K de uma interface T podemos utilizar o Pick:
 type BicicletaComPick = Pick<Veiculo, 'descricao' | 'marca'>;
 
 const minhaSegundaBike: BicicletaComPick = {
-    descricao: 'Bike que comprei',
-    marca: 'Monark'
+  descricao: 'Bike que comprei',
+  marca: 'Monark'
 };
 
 ```

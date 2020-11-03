@@ -1,13 +1,13 @@
 # Enums
 
-O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade, definindo constantes que podem ser usadas para melhorar a legilibilidade do código.
+O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade, definindo constantes que podem ser usadas para melhorar a legibilidade do código.
 
 ## Enums Numéricos
 
 Esses enums serão incrementados conforme a primeira definição, exemplo:
 
 ```ts
-enum Direçao {
+enum Direcao {
   Cima = 1,
   Baixo,
   Esquerda,
@@ -15,7 +15,7 @@ enum Direçao {
 }
 ```
 
-Seguindo a ordem, `Baixo == 2`, `Esquerda == 3`, etc...Nesse caso poderíamos declarar apenas as constantes, pois os valores inicais começam do 0.
+Seguindo a ordem, `Baixo == 2`, `Esquerda == 3`, etc... Nesse caso poderíamos declarar apenas as constantes, pois os valores iniciais começam do 0.
 
 Segue mais um exemplo da utilização de um Enum Numérico:
 
@@ -25,14 +25,14 @@ enum Resposta {
   Nao = 0
 }
 
-function responda(remetente: string, menssagem: Resposta): void {
+function responda(remetente: string, mensagem: Resposta): void {
   //...
 }
 ```
 
 ## Enums String
 
-Tambem é possível definir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremeto, logo, é necessário inicializar com um valor real, como:
+Também é possível definir constantes, vulgo, Enums, com strings. Diferente dos numéricos, não há uma ordem de incremento, logo, é necessário inicializar com um valor real, como:
 
 ```ts
 enum Direcao {
@@ -45,7 +45,7 @@ enum Direcao {
 
 ## Enums com Expressões
 
-Numa inicialização de uma constante tambem permite-se o uso de expressões, como mostra o código a seguir:
+Numa inicialização de uma constante também permite-se o uso de expressões, como mostra o código a seguir:
 
 ```ts
 enum AcessarArquivo {

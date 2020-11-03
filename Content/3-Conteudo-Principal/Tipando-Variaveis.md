@@ -16,7 +16,7 @@ Para começar, vamos corrigir o exemplo da soma demonstrada na seção introdut�
 
 ```ts
 function soma(x: number, y: number) {
-    return x + y;
+  return x + y;
 }
 ```
 
