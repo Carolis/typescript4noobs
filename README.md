@@ -24,9 +24,9 @@
 
 Este projeto tem como intenção ser um apoio aos cursos de react desenvolvidos pelo projeto 4noobs, portanto, os exemplos aqui citados estarão preferencialmente inseridos nesse ecossistema.
 
-O material é pensado para que você consiga dar um pontapé inicial no seu projeto se utilizando de um ambiente preparado para o Typescript. Se você sentir falta ou necessidade de algum conteúdo sinta-se livre para abrir uma issue sinalizando isso.
+O material é pensado para que você consiga dar um pontapé inicial no seu projeto se utilizando de um ambiente preparado para o TypeScript. Se você sentir falta ou necessidade de algum conteúdo sinta-se livre para abrir uma issue sinalizando isso.
 
-Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao Typescript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, que possui uma ótima integração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
+Outro ponto é o fato de que editores como o **VSCode** são muito mais amigáveis ao TypeScript e talvez seja uma boa ideia usá-lo caso você esteja iniciando. Porém você também pode usar o Vim, que possui uma ótima integração com Servidor da Linguagem por meio da extensão [coc.nvim](https://github.com/neoclide/coc.nvim).
 
 Todos os exemplos citados nesse artigo podem ser testados no [playground online oficial](https://www.typescriptlang.org/play) caso não queira baixar nada.
 
@@ -34,7 +34,7 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 
 ### Introdução
 
-[O que é o Typescript?](/Content/1-Intro/Intro.md)
+[O que é o TypeScript?](/Content/1-Intro/Intro.md)
 
 ### Configurando o Ambiente
 
@@ -49,7 +49,6 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 3. [Enums](/Content/3-Conteudo-Principal/Enums.md)
 
 4. [Type e Interfaces](/Content/3-Conteudo-Principal/Type-e-Interfaces.md)
-
 
 # Como Contribuir com o 4noobs
 

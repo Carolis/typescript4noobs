@@ -13,7 +13,6 @@ let qualquerCoisa
 qualquerCoisa = 1
 qualquerCoisa = "Qualquer coisa"
 qualquerCoisa = [coisa1, coisa2]
-
 ```
 
 ## Boolean
@@ -40,7 +39,7 @@ let big: bigint = 100n;
 
 Strings podem ser declaradas usando aspas simples e duplas como já conhecemos e também usando aspas **invertidas** para que algumas operações lógicas sejam inseridas dentro da variável.
 
- Sua tipagem é escrita como `:string`
+Sua tipagem é escrita como `:string`
 
 ```ts
 let frase1: string

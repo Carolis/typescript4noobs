@@ -1,6 +1,6 @@
-# Instalando o Typescript
+# Instalando o TypeScript
 
-PS: antes de seguir com a instalação do typescript é importante ter o **node** previamente instalado.
+PS: antes de seguir com a instalação do TypeScript é importante ter o **node** previamente instalado.
 
 A instalação em si é super simples e pode ser feita com apenas esse comando abaixo:
 
@@ -8,29 +8,29 @@ A instalação em si é super simples e pode ser feita com apenas esse comando a
 
 Para checar a versão instalada basta rodar `tsc -v`, assim teremos segurança de que ele realmente foi instalado.
 
-Após instalado, é interessante rodarmos `tsc --init` no terminal para que um arquivo `tsconfig.json` seja gerado. Esse arquivo é responsável por ditar como o Typescript irá se comportar no projeto: para qual versão do Javascript ele vai compilar, quais diretórios ele deve jogar seus arquivos, se ele vai ser mais ou menos "chato" com os erros, etc.
+Após instalado, é interessante rodarmos `tsc --init` no terminal para que um arquivo `tsconfig.json` seja gerado. Esse arquivo é responsável por ditar como o TypeScript irá se comportar no projeto: para qual versão do JavaScript ele vai compilar, quais diretórios ele deve jogar seus arquivos, se ele vai ser mais ou menos "chato" com os erros, etc.
 
 ---
 
 # Extra: Instalação com Yarn
 
-Você também pode inicializar seu projeto Typescript usando o **Yarn** por questões de preferência.
+Você também pode inicializar seu projeto TypeScript usando o **Yarn** por questões de preferência.
 
 Basta rodar:
 
 `yarn init -y` para inicializar o Yarn em si no diretório
 
-`yarn add -D typescript` para instalar o Typescript
+`yarn add -D typescript` para instalar o TypeScript
 
 `yarn tsc --init` para gerar o arquivo `tsconfig.json`
 
-# Typescript + React
+# TypeScript + React
 
-É possível inicializar um projeto react com um template para typescript de várias formas, uma delas se utilizando do create-react-app específico para o typescript, usando os seguintes comandos:
+É possível inicializar um projeto react com um template para TypeScript de várias formas, uma delas se utilizando do create-react-app específico para o TypeScript, usando os seguintes comandos:
 
 `yarn create react-app my-app --template typescript` ou `npx create-react-app my-app --template typescript` 
 
-Exemplo de como fica um componente funcional com typescript: 
+Exemplo de como fica um componente funcional com TypeScript:
 
 ```ts
 import React, { FunctionComponent, useState } from 'react'

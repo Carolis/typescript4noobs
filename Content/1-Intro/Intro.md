@@ -1,6 +1,6 @@
 # Introdução
 
-### O que é o Typescript?
+### O que é o TypeScript?
 
 <p align="center">
   <a href="https://twitter.com/ianhunter/status/1258209274347638787" target="_blank">
@@ -9,20 +9,20 @@
 </p>
 
 <p align="center">
-Escrito na imagem: "Typescript é como esse brinquedo."
+Escrito na imagem: "TypeScript é como esse brinquedo."
 </p>
 
-Typescript é considerado um **superset** da linguagem Javascript, dito isso, se você já sabe Javascript é muito fácil de começar a usá-lo já sabendo um pouco.
+TypeScript é considerado um **superset** da linguagem JavaScript, dito isso, se você já sabe JavaScript é muito fácil de começar a usá-lo já sabendo um pouco.
 Ele tem como  principal funcionalidade a capacidade de adicionar **tipagens estáticas** ao código.
-Um dos pontos positivos que vale a pena ser citado é a possibilidade de termos arquivos Typescript convivendo no mesmo projeto com arquivos Javascript já que no final das contas o Typescript é compilado para Javascript, ou seja, é uma ferramenta de **desenvolvimento**. Isso também permite que você adicione Typescript em qualquer momento do seu projeto, conforme necessidade e gosto pessoal.
+Um dos pontos positivos que vale a pena ser citado é a possibilidade de termos arquivos TypeScript convivendo no mesmo projeto com arquivos JavaScript já que no final das contas o TypeScript é compilado para JavaScript, ou seja, é uma ferramenta de **desenvolvimento**. Isso também permite que você adicione TypeScript em qualquer momento do seu projeto, conforme necessidade e gosto pessoal.
 
-### Por que usar Typescript?
+### Por que usar TypeScript?
 
-O uso de Typescript traz segurança principalmente na detecção de **erros inesperados**. Um exemplo clássico seria o problema do operador `+` do Javascript que, dada uma soma com tipagens erradas poderia retornar erroneamente uma **concatenação** ao invés da soma propriamente dita.
+O uso de TypeScript traz segurança principalmente na detecção de **erros inesperados**. Um exemplo clássico seria o problema do operador `+` do JavaScript que, dada uma soma com tipagens erradas poderia retornar erroneamente uma **concatenação** ao invés da soma propriamente dita.
 
 ```ts
 function soma(x, y) {
-    return x + y;
+  return x + y;
 }
 ```
 
@@ -34,7 +34,7 @@ Esse problema seria facilmente evitado ao tiparmos as variáveis corretamente co
 
 ---
 
-Outra grande vantagem de usar o Typescript é o aumento da inteligência dentro do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)** e a possibilidade de usar **parâmetros opcionais**. Além disso, as tipagens podem funcionar como uma mini documentação dentro do seu arquivo, facilitando futuras manutenções e fazendo com que todos esses fatores tragam uma camada a mais de segurança para o código.
+Outra grande vantagem de usar o TypeScript é o aumento da inteligência dentro do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)** e a possibilidade de usar **parâmetros opcionais**. Além disso, as tipagens podem funcionar como uma mini documentação dentro do seu arquivo, facilitando futuras manutenções e fazendo com que todos esses fatores tragam uma camada a mais de segurança para o código.
 
 ### Por que não usar apenas PropTypes?
 
