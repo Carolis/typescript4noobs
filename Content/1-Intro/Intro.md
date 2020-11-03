@@ -1,6 +1,6 @@
 # Introdução
 
-### O que é o Typescript?
+## O que é o Typescript?
 
 <p align="center">
   <a href="https://twitter.com/ianhunter/status/1258209274347638787" target="_blank">

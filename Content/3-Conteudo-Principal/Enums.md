@@ -1,4 +1,4 @@
-## Enums
+# Enums
 
 O Enum serve para criarmos "apelidos" para os tipos e deixá-los num formato muito mais amigável conforme sua necessidade, definindo constantes que podem ser usadas para melhorar a legilibilidade do código.
 
