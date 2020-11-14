@@ -46,3 +46,8 @@ const App: FunctionComponent<Props> = props => {
 
 export default App
 ```
+
+# Typescript + React Native
+
+Também é possível iniciar um projeto React Native com Typescript usando esse comando:
+`npx react-native init MyApp --template react-native-template-typescript`
