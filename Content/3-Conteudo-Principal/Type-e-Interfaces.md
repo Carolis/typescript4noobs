@@ -1,4 +1,4 @@
-## Type e Interfaces
+# Type e Interfaces
 
 Vimos que podemos usar os tipos naturais da linguagem, porém, e se quisermos ir além? Definir nossos próprios tipos, tipar objetos e muito mais?
 
