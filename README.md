@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <h2 align="center">Typescript4noobs</h2> 
+  <h2 align="center">Typescript4noobs</h2>
 
   <h1 align="center"><img src="./.github/images/Typescript_logo_2020.png" alt="Logo do Typescript" width="120"></h1>
 
@@ -50,6 +50,8 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 
 4. [Type e Interfaces](/Content/3-Conteudo-Principal/Type-e-Interfaces.md)
 
+5. [Generics](/Content/3-Conteudo-Principal/Generics.md)
+
 # Como Contribuir com o 4noobs
 
 Contribuições fazem com que a comunidade open source seja um lugar incrível para aprender, inspirar e criar. Todas contribuições
@@ -63,11 +65,9 @@ são **extremamente apreciadas**
 
 # Autores
 
-- **Carolina Ale** - _Developer & Member of He4rt Developers_  - [Twitter](https://twitter.com/caroliscaroles) - [Github](https://github.com/Carolis)
-  
-- **Matheus de Souza Pessanha** - _Developer & Member of He4rt Developers_  - [Github](https://github.com/Mdsp9070)
-  
-- **Matheus Navarro** - _Developer & Member of He4rt Developers_  - [Github](https://github.com/navarrotheus)
+- **Carolina Ale** - _Developer & Member of He4rt Developers_ - [Twitter](https://twitter.com/caroliscaroles) - [Github](https://github.com/Carolis)
+- **Matheus de Souza Pessanha** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/Mdsp9070)
+- **Matheus Navarro** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/navarrotheus)
 
 <p align="center">Made with 💜</p>
 
