@@ -69,6 +69,16 @@ são **extremamente apreciadas**
 - **Matheus de Souza Pessanha** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/Mdsp9070)
 - **Matheus Navarro** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/navarrotheus)
 
+# Colaboradores
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/midhatdrops"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/67974118?v=4" width="100px" alt="midhatdrops"/><br/><sub><b>Bruno Rezende Novais</b></sub></a><br/>
+<td align="center"><a href="https://github.com/idrodrigosantos"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/23555768?v=4" width="100px" alt="idrodrigosantos"/><br/><sub><b>Rodrigo Santos</b></sub></a><br/>
+<td align="center"><a href="https://github.com/VitorLuizC"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/9027363?v=4" width="100px" alt="VitorLuizCs"/><br/><sub><b>Vitor Luiz Cavalcanti</b></sub></a><br/>
+</tr>
+</table>
+
 <p align="center">Made with 💜</p>
 
 ---
