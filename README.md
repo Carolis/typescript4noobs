@@ -51,6 +51,8 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 4. [Type e Interfaces](/Content/3-Conteudo-Principal/Type-e-Interfaces.md)
 
 5. [Generics](/Content/3-Conteudo-Principal/Generics.md)
+   
+6. [Optional Chaining](/Content/3-Conteudo-Principal/OptionalChaining.md)
 
 # Como Contribuir com o 4noobs
 
