@@ -41,6 +41,7 @@ type Triangulo = {
   area(altura: number, base: number): number;
   // ou
   area: (altura: number, base: number) => number;
+}
 
 enum AcessarArquivo {
   Nada,
