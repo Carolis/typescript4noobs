@@ -80,3 +80,9 @@ console.log(userList);
 
 Repare que no primeiro chamamos o método get do Axios para recuperar uma lista de números, no segundo usamos o **mesmo** método, porém agora conseguimos recuperar
 uma lista de User, um tipo totalmente diferente de number. Desse modo, vemos que há uma flexibilidade do método get graças ao uso do Generic !
+
+---
+
+<p align="center">
+  <a href="https://github.com/Carolis/typescript4noobs#roadmap">VOLTAR PARA O MENU PRINCIPAL</a>
+</p>
