@@ -33,3 +33,8 @@ Por exemplo:
 
 No caso do primeiro console.log, ele retornará `'Eros'` porque é o nome atribuído a `dog` e no caso do segundo onde queremos mostrar o `companyName` ele retornará `undefined` e não irá parar o programa, ele simplesmente irá dar um "curto-circuito" e vai retornar `undefined` mas sem ser um erro de referência, assim fazendo nosso programa continuar a executar.
 
+---
+
+<p align="center">
+  <a href="https://github.com/Carolis/typescript4noobs#roadmap">VOLTAR PARA O MENU PRINCIPAL</a>
+</p>
