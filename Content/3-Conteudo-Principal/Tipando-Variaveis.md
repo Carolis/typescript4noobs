@@ -49,3 +49,9 @@ Caso o tipo retornado não corresponda com o tipo do retorno:
 </div>
 
 Dessa forma seremos alertados com um erro.
+
+---
+
+<p align="center">
+  <a href="https://github.com/Carolis/typescript4noobs#roadmap">VOLTAR PARA O MENU PRINCIPAL</a>
+</p>
