@@ -68,7 +68,7 @@ são **extremamente apreciadas**
 # Autores
 
 - **Carolina Ale** - _Developer & Member of He4rt Developers_ - [Twitter](https://twitter.com/caroliscaroles) - [Github](https://github.com/Carolis)
-- **Matheus de Souza Pessanha** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/Mdsp9070)
+- **Zoey de Souza Pessanha** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/zoedsoupe)
 - **Matheus Navarro** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/navarrotheus)
 
 # Colaboradores
