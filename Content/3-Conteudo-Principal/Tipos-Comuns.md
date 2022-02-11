@@ -109,3 +109,9 @@ meuObjeto = {
   caracteristica1: "quadrado"
 }
 ```
+
+---
+
+<p align="center">
+  <a href="https://github.com/Carolis/typescript4noobs#roadmap">VOLTAR PARA O MENU PRINCIPAL</a>
+</p>
