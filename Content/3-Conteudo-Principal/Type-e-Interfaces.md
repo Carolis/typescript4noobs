@@ -85,7 +85,7 @@ interface Geladeira {
 }
 
 // declarando um objeto do tipo Geladeira 
-const Brastemp: Geladeira {
+const Brastemp: Geladeira = {
   nome: "Brastemp Frost Free",
   descricao: "Geladeira bonita",
   modelo: "1231XHDDH"
