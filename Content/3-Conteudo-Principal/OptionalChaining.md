@@ -21,7 +21,7 @@ Por exemplo:
   const companyName = person?.company;
 ```
 
-No exemplo acima, criamos um objeto ``person`` que recebeu as características demonstradas acima. Abaixo foram criadas duas constantes que recebem o nome do cachorro e o nome da empresa em que ele trabalha, essas constantes podem ser usadas para o que o usuário bem queira, o optional chaining facilita a nossa vida porque, caso o objeto não tenha uma das propriedades chamadas, ele retornará `undefined ` e não um erro de referencia, parando assim a execução do nosso programa. 
+No exemplo acima, criamos um objeto ``person`` que recebeu as características demonstradas acima. Abaixo foram criadas duas constantes que recebem o nome do cachorro e o nome da empresa em que ele trabalha, essas constantes podem ser usadas para o que o usuário bem queira, o optional chaining facilita a nossa vida porque, caso o objeto não tenha uma das propriedades chamadas, ele retornará `undefined ` e não um erro de referencia, não parando assim a execução do nosso programa. 
 
 Por exemplo:
 
