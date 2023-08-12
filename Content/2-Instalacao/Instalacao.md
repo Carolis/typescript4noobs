@@ -26,9 +26,14 @@ Basta rodar:
 
 # TypeScript + React
 
-É possível inicializar um projeto react com um template para TypeScript de várias formas, uma delas se utilizando do create-react-app específico para o TypeScript, usando os seguintes comandos:
+É possível inicializar um projeto react com um template para TypeScript de várias formas, uma delas se utilizando do vite com o template do TypeScript, usando os seguintes comandos:
 
-`yarn create react-app my-app --template typescript` ou `npx create-react-app my-app --template typescript` 
+#### yarn 
+`yarn create vite my-tsreact-app --template react-ts`
+#### npm 6.x 
+`npm create vite@latest my-tsreact-app --template react-ts` 
+#### npm 7.x 
+`npm create vite@latest my-tsreact-app -- --template vue`
 
 Exemplo de como fica um componente funcional com TypeScript:
 
