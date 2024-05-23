@@ -198,7 +198,7 @@ const novoAluno : pessoa & aluno = {
 
 ### Criando interfaces com chave desconhecida
 Alguns momentos você pode saber que será recebido itens com um valor com sua tipagem conhecida, porém sem ter o conhecimento da sua chave existem duas formas
-que são elas "tipos de indexação" e comumente utilizado e recomendado em vários tópicos/livros as recordações(records).
+que são elas "tipos de indexação" e comumente utilizado e recomendado em vários tópicos/livros as registros(records).
 Exemplo de tipos de indexação:
 ```
 //Utilizando tipos de indexação
