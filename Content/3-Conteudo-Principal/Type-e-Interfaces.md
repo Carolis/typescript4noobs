@@ -211,7 +211,7 @@ const resultados : pontuacaoDaProva {
   "maria":9
 }
 ```
-Exemplo de Recordações:
+Exemplo de Registros:
 ```
 const resultados: Record<string,number> = {
   "mateus":8,
