@@ -145,8 +145,81 @@ const minhaSegundaBike: BicicletaComPick = {
   descricao: 'Bike que comprei',
   marca: 'Monark'
 };
+```
+### Seleção única
+Em alguns casos você também pode apenas querer um item de uma interface para utilizar. 
+Segue um exemplo:
+```
+interface pessoa {
+  nome: string,
+  idade: number
+}
+//Aqui utilizamos apenas a propriedade "nome" de pessoa
+const nome : pessoa["nome"] = 'Mateus';
+```
+
+### Herança
+Em muitos casos será necessário o uso de interfaces em vários locais do seu código adicionando novas coisas. Para resolver isso utilizamos a herança
+Exemplo:
+```
+interface pessoa {
+  nome: string,
+  idade: number
+}
+//Aqui estamos extendendo a interface pessoa e herdando ela em aluno
+//Assim podemos atribuir e utilizar os mesmos dados que já estão em pessoa
+interface aluno extends pessoa {
+  codigo: number
+}
+const novoAluno : aluno = {
+  codigo: 1,
+  nome: "Mateus",
+  idade: 25
+}
+```
+### União (Intersection Types)
+Parecido com herança também existe a únião que é quando você quer adicionar diretamente em variável/tipo sem criar uma nova interface ou uma interface local.
+Exemplo:
+```
+interface pessoa {
+  nome: string,
+  idade: number
+}
+interface aluno {
+  codigo: number
+}
+const novoAluno : pessoa & aluno = {
+  codigo: 1,
+  nome: "Mateus",
+  idade: 25
+}
 
 ```
+
+### Criando interfaces com chave desconhecida
+Alguns momentos você pode saber que será recebido itens com um valor com sua tipagem conhecida, porém sem ter o conhecimento da sua chave existem duas formas
+que são elas "tipos de indexação" e comumente utilizado e recomendado em vários tópicos/livros os registros(records).
+Exemplo de tipos de indexação:
+```
+//Utilizando tipos de indexação
+interface pontuacaoDaProva {
+    [key: string]: number;
+}
+const resultados : pontuacaoDaProva {
+  "mateus":8,
+  "joao":3,
+  "maria":9
+}
+```
+Exemplo de Registros:
+```
+const resultados: Record<string,number> = {
+  "mateus":8,
+  "joao":3,
+  "maria":9  
+}
+```
+
 
 ---
 
