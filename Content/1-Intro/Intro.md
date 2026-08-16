@@ -12,94 +12,99 @@
 Escrito na imagem: "TypeScript é como esse brinquedo."
 </p>
 
-TypeScript é considerado um **superset** da linguagem JavaScript, dito isso, se você já sabe JavaScript é muito fácil de começar a usá-lo já sabendo um pouco.
-Ele tem como  principal funcionalidade a capacidade de adicionar **tipagens estáticas** ao código.
-Um dos pontos positivos que vale a pena ser citado é a possibilidade de termos arquivos TypeScript convivendo no mesmo projeto com arquivos JavaScript já que no final das contas o TypeScript é compilado para JavaScript, ou seja, é uma ferramenta de **desenvolvimento**. Isso também permite que você adicione TypeScript em qualquer momento do seu projeto, conforme necessidade e gosto pessoal.
+TypeScript é um **superset** do JavaScript — se você já conhece JS, começar é bem natural. Sua principal função é adicionar **tipagens estáticas** ao código.
+
+Arquivos `.ts` e `.js` podem conviver no mesmo projeto. O TypeScript **analisa e valida** tudo em tempo de desenvolvimento e, se precisar, também **emite** JavaScript — embora muitos projetos hoje deixem essa parte para ferramentas como Vite ou esbuild. Os tipos existem só enquanto você desenvolve: não vão para produção. Por isso dá para adotar TypeScript aos poucos, no seu ritmo.
+
+### TypeScript 7: reescrito e muito mais rápido
+
+A versão atual da linguagem é a **7.0.2**. Uma das maiores mudanças dessa geração foi a **reescrita completa do compilador**: o TypeScript deixou de ser implementado em TypeScript/JavaScript e passou a ser um **compilador nativo escrito em Go**.
+
+Essa reescrita trouxe ganhos expressivos de performance. Em projetos reais de grande porte, a checagem de tipos costuma ficar entre **8 e 12 vezes mais rápida** do que na versão anterior na prática, algo em torno de **10x mais rápido**. Isso vale tanto para o comando `tsc` quanto para a experiência no editor: autocomplete, diagnósticos e outras funcionalidades do IntelliSense respondem bem mais rápido, o que deixa o fluxo de desenvolvimento mais fluido no dia a dia.
 
 ### Por que usar TypeScript?
 
-O uso de TypeScript traz segurança principalmente na detecção de **erros inesperados**. Um exemplo clássico seria o problema do operador `+` do JavaScript que, dada uma soma com tipagens erradas poderia retornar erroneamente uma **concatenação** ao invés da soma propriamente dita.
+O TypeScript funciona como um **assistente que revisa seu código enquanto você escreve**. Ele avisa sobre erros de digitação, tipos incompatíveis e uso incorreto de variáveis tudo **antes** do código chegar ao usuário final. A única diferença visível em relação ao JavaScript é que o arquivo passa a ter extensão `.ts`; o resto continua sendo JavaScript normal, com anotações de tipo por cima.
 
-```ts
+Veja alguns exemplos do que isso muda na prática.
+
+#### Erros em funções
+
+Um caso clássico é o operador `+` do JavaScript: com tipos errados, ele concatena em vez de somar.
+
+Em **JavaScript puro**, o erro só aparece quando o código é executado:
+
+```js
 function soma(x, y) {
   return x + y;
 }
+
+soma(2, 2);       // 4 ✓
+soma('2', '2');   // "22" — resultado errado, sem nenhum aviso
 ```
 
-Chamando a função `soma(2,2)` o retorno seria `4`;
-
-Chamando a função `soma('2','2')` o retorno seria `22`;
-
-Esse problema seria facilmente evitado ao tiparmos as variáveis corretamente como números.
-
----
-
-Outra grande vantagem de usar o TypeScript é o aumento da inteligência dentro do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)** e a possibilidade de usar **parâmetros opcionais**. Além disso, as tipagens podem funcionar como uma mini documentação dentro do seu arquivo, facilitando futuras manutenções e fazendo com que todos esses fatores tragam uma camada a mais de segurança para o código.
-
-### Por que não usar apenas PropTypes?
-
-Apesar de ser considerado uma alterativa ao TypeScript, o PropTypes é uma biblioteca que só faz a checagem de tipos em _props_ de componentes **React.js**. Isso torna muito difícil a comparação com o TypeScript que, por ser um _superset_ do JavaScript, adiciona recursos a linguagem e conta uma checagem de tipos muito mais poderosa, onde podemos checar das variáveis, aos objetos, funções, classes etc.
-
-Porém se desconsiderarmos as limitações do PropTypes, existem outras diferenças importantes. Como:
-1. O momento em que a checagem de tipos acontece;
-2. A severidade com que os erros são tratados;
-3. A forma como declaramos os estruturas/esquemas com os tipos;
-
-O PropTypes faz a checagem de tipos em tempo de execução (quando a aplicação está _rodando_, sendo executada) e os erros são tratados apenas como alertas (_warnings_). Isso torna a checagem de tipos passíva e fácil de ser ignorada pelo desenvolvedor, o que pode resultar em falhas e _bugs_. Enquanto no TypeScript a checagem de tipos acontece em tempo de compilação (quando o código-fonte em TypeScript é compilado para JavaScript) e é possível configurar no `tsconfig.json` o comportamento em caso de erros, se mais permissivo ou menos dependendo do projeto.
-
-No PropTypes contratos (estruturas/esquemas com os tipos) das _props_ de um componente **React.js** são declarados usando um objeto, que é atribuído a propriedade estática `propTypes` e usa propriedades e métodos exportados pela biblioteca `prop-types`. Esses objetos acabam tendo um impacto na performance e no tamanho da aplicação. Enquanto no TypeScript usamos `type` ou `interface` para declarar os contratos de objetos, e isso também vale para _props_ de componentes **React.js**. Ao compilar para JavaScript esses tipos e interfaces são simplesmente omitidos e não tem impacto na performance ou no tamanho da aplicação.
-
-<table>
-<thead>
-<tr>
-<th>
-PropTypes
-</th>
-<th>
-TypeScript
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-```js
-import PropTypes from 'prop-types';
-
-function Button(props) {
-  // ...
-}
-
-Button.propTypes = {
-  type: PropTypes.oneOf(
-    ['button', 'reset', 'submit']
-  ).isRequired,
-  text: PropTypes.string.isRequired
-};
-```
-
-</td>
-<td>
+Com **TypeScript**, basta indicar que os parâmetros são números:
 
 ```ts
-type Props = {
-  type: 'button' | 'reset' | 'submit';
-  text: string;
-};
-
-function Button(props: Props) {
-  // ...
+function soma(x: number, y: number) {
+  return x + y;
 }
+
+soma(2, 2);       // 4 ✓
+soma('2', '2');   // ❌ erro: não dá para passar texto onde se espera número
 ```
 
-</td>
-</tr>
-</tbody>
-</table>
+
+
+#### Erros de digitação em objetos
+
+Erros bobos de digitação também passam despercebidos no JavaScript:
+
+```js
+const usuario = {
+  nome: "Ana",
+  email: "ana@email.com",
+  idade: 25
+};
+
+console.log(usuario.email);  // "ana@email.com" ✓
+console.log(usuario.emial);  // undefined — o erro passa despercebido
+```
+
+No TypeScript, o compilador **entende** o formato do objeto e aponta o problema na hora:
+
+```ts
+const usuario = {
+  nome: "Ana",
+  email: "ana@email.com",
+  idade: 25
+};
+
+console.log(usuario.email);  // "ana@email.com" ✓
+console.log(usuario.emial);  // ❌ erro: a propriedade 'emial' não existe
+```
+
+
+
+#### Variáveis com tipo definido
+
+Você também pode declarar explicitamente o tipo de uma variável:
+
+```ts
+let idade: number = 25;
+
+idade = 30;       // ✓ ok
+idade = "trinta"; // ❌ erro: não dá para colocar texto onde se espera número
+```
+
+No JavaScript, `idade = "trinta"` funcionaria sem aviso — e o bug só apareceria depois, em algum cálculo ou comparação.
+
+#### IntelliSense e documentação viva
+
+Além de prevenir erros, o TypeScript aumenta a inteligência do seu editor ou IDE, o famoso **[IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)**. Com tipos definidos, o editor passa a sugerir automaticamente nomes de propriedades, parâmetros e props — inclusive opcionais  enquanto você digita. As tipagens também funcionam como uma mini documentação dentro do arquivo, facilitando manutenções futuras.
+
+Desde o TypeScript 6, o modo `strict` (que inclui essas proteções) vem **ligado por padrão**. Quanto maior o projeto, mais o TypeScript compensa — e tudo isso **não vai para produção**: os tipos são removidos na saída final, sem impacto em performance.
 
 ---
 
-<p align="center">
-  <a href="https://github.com/Carolis/typescript4noobs#roadmap">VOLTAR PARA O MENU PRINCIPAL</a>
-</p>
+[VOLTAR PARA O MENU PRINCIPAL](https://github.com/Carolis/typescript4noobs#roadmap)
