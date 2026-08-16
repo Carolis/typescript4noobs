@@ -1,64 +1,158 @@
 # Instalando o TypeScript
 
-PS: antes de seguir com a instalação do TypeScript é importante ter o **node** previamente instalado.
+Antes de instalar o TypeScript, você precisa ter o **[Node.js](https://nodejs.org/)** instalado na sua máquina — o requisito mínimo depende da versão do TypeScript (veja [Requisito de Node.js](#requisito-de-nodejs)).
 
-A instalação em si é super simples e pode ser feita com apenas esse comando abaixo:
+> **Dica:** na prática, muita gente nem instala o TypeScript manualmente. Ao criar um projeto com **React** (Vite), **Next.js** ou **React Native**, o TypeScript já aparece como opção durante a instalação — basta aceitar quando o terminal perguntar. No Next.js, por exemplo, a opção **"Yes, use recommended defaults"** já inclui TypeScript, ESLint, Tailwind CSS e App Router.
 
-`npm install -g typescript`
+<p align="center">
+  <img src="../../.github/images/terminal.png" alt="Terminal do create-next-app mostrando TypeScript nos defaults recomendados" width="700">
+</p>
 
-Para checar a versão instalada basta rodar `tsc -v`, assim teremos segurança de que ele realmente foi instalado.
-
-Após instalado, é interessante rodarmos `tsc --init` no terminal para que um arquivo `tsconfig.json` seja gerado. Esse arquivo é responsável por ditar como o TypeScript irá se comportar no projeto: para qual versão do JavaScript ele vai compilar, quais diretórios ele deve jogar seus arquivos, se ele vai ser mais ou menos "chato" com os erros, etc.
+<p align="center">
+Na imagem: ao rodar <code>npx create-next-app@latest</code>, a opção de defaults recomendados já inclui TypeScript.
+</p>
 
 ---
 
-# Extra: Instalação com Yarn
+## Requisito de Node.js
 
-Você também pode inicializar seu projeto TypeScript usando o **Yarn** por questões de preferência.
+O Node.js exigido varia conforme a versão do TypeScript que você for usar:
 
-Basta rodar:
+- **TypeScript 6.x:** Node.js **18.0** ou superior
+- **TypeScript 7.x:** Node.js **20.0** ou superior (recomendado: Node **20** ou **22** LTS)
 
-`yarn init -y` para inicializar o Yarn em si no diretório
+Para checar sua versão:
 
-`yarn add -D typescript` para instalar o TypeScript
+```bash
+node -v
+```
 
-`yarn tsc --init` para gerar o arquivo `tsconfig.json`
+Se você está começando um projeto novo com **TS 7.x**, instale Node **20+**. Se estiver em um projeto legado com **TS 6.x**, Node **18+** já é suficiente.
 
-# TypeScript + React
+---
 
-É possível inicializar um projeto react com um template para TypeScript de várias formas, uma delas se utilizando do vite com o template do TypeScript, usando os seguintes comandos:
+## Qual versão instalar?
 
-#### yarn 
-`yarn create vite my-tsreact-app --template react-ts`
-#### npm 6.x 
-`npm create vite@latest my-tsreact-app --template react-ts` 
-#### npm 7.x 
-`npm create vite@latest my-tsreact-app -- --template vue`
+Recomendamos sempre instalar a versão mais recente e estável do TypeScript:
 
-Exemplo de como fica um componente funcional com TypeScript:
+```bash
+# Instalação padrão (versão mais recente - TS 7.x)
+npm install -D typescript
+yarn add -D typescript
+pnpm add -D typescript
+
+# Para fixar na versão 6.x (se o projeto legado exigir)
+npm install -D typescript@6
+yarn add -D typescript@6
+pnpm add -D typescript@6
+```
+
+### Entendendo as versões (TS 6 vs TS 7)
+
+- **TypeScript 6.x:** Lançado em março de 2026, foi a última versão baseada na arquitetura clássica em JavaScript. Ela serve como ponte para remover configs legadas (como ES5 e `baseUrl`).
+- **TypeScript 7.x:** A versão atual e **recomendada para qualquer projeto novo**.
+
+---
+
+## Instalação manual (por projeto)
+
+A forma recomendada é instalar o TypeScript **dentro de cada projeto**, não globalmente. Assim, todo mundo na equipe usa a mesma versão.
+
+**1.** Crie ou entre na pasta do projeto e inicialize o gerenciador de pacotes (se ainda não tiver):
+
+```bash
+npm init -y        # npm
+yarn init -y       # yarn
+pnpm init          # pnpm
+```
+
+**2.** Instale o TypeScript usando um dos comandos da seção [Qual versão instalar?](#qual-versão-instalar) — escolha **TS 7.x** para projetos novos ou **TS 6.x** se o projeto legado exigir.
+
+**3.** Verifique se instalou corretamente:
+
+```bash
+npx tsc -v
+```
+
+**4.** Gere o arquivo `tsconfig.json` (configuração do TypeScript no projeto):
+
+```bash
+npx tsc --init
+```
+
+Esse arquivo define como o TypeScript se comporta: quão rigoroso ele é com erros, quais pastas analisar, qual versão do JavaScript emitir (quando necessário), etc. Em projetos modernos, muitas vezes o TypeScript só **checa tipos** e ferramentas como Vite ou esbuild cuidam de transformar o código.
+
+---
+
+## TypeScript + React (Vite)
+
+Ao criar um projeto React, o TypeScript já pode ser incluído pelo template. Com o **Vite**:
+
+#### npm
+
+```bash
+npm create vite@latest my-tsreact-app -- --template react-ts
+```
+
+
+
+#### yarn
+
+```bash
+yarn create vite my-tsreact-app --template react-ts
+```
+
+
+
+#### pnpm
+
+```bash
+pnpm create vite my-tsreact-app --template react-ts
+```
+
+
+
+### TypeScript + Next.js
+
+No **Next.js**, o TypeScript vem nas opções recomendadas ao rodar:
+
+```bash
+npx create-next-app@latest
+```
+
+O assistente interativo pergunta se você quer usar os defaults recomendados — e eles já incluem **TypeScript**. Também dá para personalizar e marcar TypeScript manualmente em **"No, customize settings"**.
+
+Exemplo de componente funcional com TypeScript (padrão atual):
 
 ```ts
-import React, { FunctionComponent, useState } from 'react'
+import { useState } from 'react'
 
 interface Props {
   message: string
 }
 
-const App: FunctionComponent<Props> = props => {
-  const [hasMessage, setHasMessage] = useState<boolean>(false)
-  return <p>{hasMessage ? props.message : 'Default Message'}</p>
+function App({ message }: Props) {
+  const [hasMessage, setHasMessage] = useState(false)
+  return <p>{hasMessage ? message : 'Default Message'}</p>
 }
 
 export default App
 ```
 
-# Typescript + React Native
+---
 
-Também é possível iniciar um projeto React Native com Typescript usando esse comando:
-`npx react-native init MyApp --template react-native-template-typescript`
+
+
+## TypeScript + React Native
+
+Desde o React Native **0.71**, novos projetos já vêm com TypeScript por padrão — não é mais necessário usar um template separado.
+
+```bash
+npx @react-native-community/cli@latest init MyApp
+```
+
+O template antigo `react-native-template-typescript` está **deprecado**. Se preferir **Expo**, também há suporte nativo a TypeScript — basta adicionar um arquivo `.ts` ou `.tsx` que o Expo configura automaticamente.
 
 ---
 
-<p align="center">
-  <a href="https://github.com/Carolis/typescript4noobs#roadmap">VOLTAR PARA O MENU PRINCIPAL</a>
-</p>
+[VOLTAR PARA O MENU PRINCIPAL](https://github.com/Carolis/typescript4noobs#roadmap)
