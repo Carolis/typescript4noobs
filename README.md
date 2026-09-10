@@ -32,27 +32,52 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 
 # Roadmap
 
-### Introdução
+### 1. Introdução
 
-[O que é o TypeScript?](/Content/1-Intro/Intro.md)
+1. [O que é o TypeScript?](/Content/01-introducao/01-o-que-e-typescript.md)
+2. [Formas de tipagem](/Content/01-introducao/02-formas-de-tipagem.md)
+3. [Como usar este guia](/Content/01-introducao/03-como-usar-este-guia.md)
 
-### Configurando o Ambiente
+### 2. Ambiente
 
-[Instalação](/Content/2-Instalacao/Instalacao.md)
+1. [Instalação](/Content/02-ambiente/01-instalacao.md)
+2. [tsconfig](/Content/02-ambiente/02-tsconfig.md)
+3. [Playground, editores e extensões](/Content/02-ambiente/03-playground-e-editores.md)
 
-### Conteúdo Principal
+### 3. Básico
 
-1. [Introdução à Tipagem de Variáveis](/Content/3-Conteudo-Principal/Tipando-Variaveis.md)
+1. [Anotações de tipo](/Content/03-basico/01-anotacoes-de-tipo.md)
+2. [Tipos primitivos](/Content/03-basico/02-tipos-primitivos.md)
+3. [Arrays e tuplas](/Content/03-basico/03-arrays-e-tuplas.md)
+4. [Funções](/Content/03-basico/04-funcoes.md)
+5. [Objetos](/Content/03-basico/05-objetos.md)
+6. [Type aliases](/Content/03-basico/06-type-aliases.md)
+7. [Interfaces](/Content/03-basico/07-interfaces.md)
+8. [type vs interface](/Content/03-basico/08-type-vs-interface.md)
+9. [null, undefined e optional](/Content/03-basico/09-null-undefined-optional.md)
+10. [any, unknown, never e void](/Content/03-basico/10-any-unknown-never-void.md)
+11. [Exercícios](/Content/03-basico/11-exercicios.md)
 
-2. [Tipos mais Comuns](/Content/3-Conteudo-Principal/Tipos-Comuns.md)
+### 4. Intermediário
 
-3. [Enums](/Content/3-Conteudo-Principal/Enums.md)
+1. [Enums e as const](/Content/04-intermediario/01-enums-e-as-const.md)
+2. [Narrowing](/Content/04-intermediario/02-narrowing.md)
+3. [Generics](/Content/04-intermediario/03-generics.md)
+4. [Tipos utilitários](/Content/04-intermediario/04-tipos-utilitarios.md)
+5. [keyof, typeof e indexed access](/Content/04-intermediario/05-keyof-typeof-e-indexed-access.md)
+6. [Classes](/Content/04-intermediario/06-classes.md)
+7. [Módulos](/Content/04-intermediario/07-modulos.md)
+8. [Exercícios](/Content/04-intermediario/08-exercicios.md)
 
-4. [Type e Interfaces](/Content/3-Conteudo-Principal/Type-e-Interfaces.md)
+### 5. Avançado
 
-5. [Generics](/Content/3-Conteudo-Principal/Generics.md)
-   
-6. [Optional Chaining](/Content/3-Conteudo-Principal/OptionalChaining.md)
+1. [Conditional types](/Content/05-avancado/01-conditional-types.md)
+2. [Mapped types](/Content/05-avancado/02-mapped-types.md)
+3. [Template literal types](/Content/05-avancado/03-template-literal-types.md)
+4. [infer](/Content/05-avancado/04-infer.md)
+5. [satisfies](/Content/05-avancado/05-satisfies.md)
+6. [Declaration files](/Content/05-avancado/06-declaration-files.md)
+7. [Exercícios](/Content/05-avancado/07-exercicios.md)
 
 # Como Contribuir com o 4noobs
 
@@ -70,6 +95,7 @@ são **extremamente apreciadas**
 - **Carolina Ale** - _Developer & Member of He4rt Developers_ - [Twitter](https://twitter.com/caroliscaroles) - [Github](https://github.com/Carolis)
 - **Zoey de Souza Pessanha** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/zoedsoupe)
 - **Matheus Navarro** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/navarrotheus)
+- **Davy Cosmo** - _Developer & Member of He4rt Developers_ - [Github](https://github.com/DavyDevcosmo)
 
 # Colaboradores
 
