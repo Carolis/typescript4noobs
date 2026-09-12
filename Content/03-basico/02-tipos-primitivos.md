@@ -13,7 +13,7 @@ let nome: string = "Ana";  // ✓ primitivo
 let errado: String = "Ana"; // ⚠️ evite — wrapper, não primitivo
 ```
 
-Sempre com letra minúscula — `String` (maiúsculo) é outra coisa, e o TypeScript avisa se você usar sem querer. Quem vem de Java ou copia exemplos antigos cai nessa pegadinha com frequência.
+Sempre com letra minúscula — `String` (maiúsculo) é outra coisa, e o ESLint avisa se você usar sem querer. Quem vem de Java ou copia exemplos antigos cai nessa pegadinha com frequência.
 
 ## string
 
