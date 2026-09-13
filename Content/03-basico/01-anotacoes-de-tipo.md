@@ -12,23 +12,24 @@ O compilador passa a saber o que cada variável guarda. Se você tentar atribuir
 
 Vamos ver isso na prática com um exemplo completo: primeiro em JavaScript, depois em TypeScript.
 
-## JavaScript: calcular a idade
+## JavaScript: somar idades
 
 ```js
-function calcularIdade(anoNascimento, anoAtual) {
-  return anoAtual - anoNascimento;
+function somarIdades(idadeA, idadeB) {
+  return idadeA + idadeB;
 }
 
-const usuario = {
-  nome: "Diego",
-  anoNascimento: "1990",
+const idade = {
+  ana: 25,
+  bruno: "30", 
 };
 
-console.log(calcularIdade(usuario.anoNascimento, 2026));
-// NaN — "1990" é string, não número
+const resultado = somarIdades(idade.ana, idade.bruno);
+console.log(resultado);        // "2530"
+console.log(typeof resultado); // "string"
 ```
 
-O código roda sem erro. Só que o resultado é `NaN`, porque o JavaScript concatenou/subtraiu tipos errados sem avisar.
+O código roda sem erro. Só que `25 + "30"` vira `"2530"` — o `+` do JavaScript concatena quando um dos lados é string, em vez de somar. O `typeof` confirma: o resultado é texto, não número.
 
 Outro problema comum: passar o objeto inteiro sem checar se os campos existem.
 
@@ -45,12 +46,12 @@ Bug silencioso de novo.
 Começamos pelos parâmetros da função:
 
 ```ts
-function calcularIdade(anoNascimento: number, anoAtual: number): number {
-  return anoAtual - anoNascimento;
+function somarIdades(idadeA: number, idadeB: number): number {
+  return idadeA + idadeB;
 }
 
-calcularIdade(1990, 2026);     // 36 ✓
-calcularIdade("1990", 2026);   // ❌ erro: string não é number
+somarIdades(25, 30);      // 55 ✓
+somarIdades(25, "30");    // ❌ erro: string não é number
 ```
 
 Com `: number` nos parâmetros, a concatenação acidental some. O retorno `: number` garante que a função devolve um número — se você retornar texto por engano, o compilador barra.
