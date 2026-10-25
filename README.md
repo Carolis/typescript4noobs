@@ -66,7 +66,7 @@ Todos os exemplos citados nesse artigo podem ser testados no [playground online 
 4. [Tipos utilitários](/Content/04-intermediario/04-tipos-utilitarios.md)
 5. [keyof, typeof e indexed access](/Content/04-intermediario/05-keyof-typeof-e-indexed-access.md)
 6. [Classes](/Content/04-intermediario/06-classes.md)
-7. [Módulos](/Content/04-intermediario/07-modulos.md)
+7. [Módulos e namespaces](/Content/04-intermediario/07-modulos.md)
 8. [Exercícios](/Content/04-intermediario/08-exercicios.md)
 
 ### 5. Avançado

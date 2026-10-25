@@ -92,6 +92,57 @@ export * from "./tipos";
 
 Assim quem consome só importa da pasta (`import { somar } from "./utils"`), sem precisar saber em qual arquivo específico cada coisa está.
 
+## Namespaces
+
+Um `namespace` agrupa declarações relacionadas sob um nome. Você acessa seus membros com `NomeDoNamespace.membro`, evitando que cada nome ocupe diretamente o escopo global.
+
+### Caso de uso: um script sem módulos
+
+Imagine uma página antiga que carrega scripts sem `import`/`export`. Um namespace pode reunir os tipos e as funções de mensagens da página, reduzindo colisões com nomes de outros scripts:
+
+```ts
+namespace Mensagens {
+  const saudacao = "Olá";
+
+  export interface Usuario {
+    nome: string;
+  }
+
+  export function boasVindas(usuario: Usuario): string {
+    return `${saudacao}, ${usuario.nome}!`;
+  }
+}
+
+const usuario: Mensagens.Usuario = { nome: "Ana" };
+
+console.log(Mensagens.boasVindas(usuario)); // "Olá, Ana!"
+```
+
+O `export` **dentro** do namespace torna aquele membro acessível de fora, pelo nome do namespace. Ele não transforma o arquivo em um módulo. Sem `export`, a declaração fica acessível apenas dentro do bloco:
+
+```ts
+Mensagens.saudacao; // ❌ 'saudacao' não é exportada pelo namespace
+```
+
+A interface `Mensagens.Usuario` existe só durante a checagem de tipos. Já o namespace com a função `boasVindas` gera código JavaScript: neste exemplo, um objeto `Mensagens` com a função exportada. Compile o exemplo com TypeScript antes de executar o JavaScript; `namespace` não é sintaxe nativa do JavaScript.
+
+### Namespace ou módulo?
+
+Namespaces aparecem em projetos antigos e em arquivos de declaração de bibliotecas que expõem nomes globais. Para código novo, especialmente em React e Node.js, prefira os **módulos** com `import`/`export` apresentados nesta aula: cada arquivo já tem seu próprio escopo e declara suas dependências explicitamente.
+
+Não é necessário envolver os exports de um módulo em um namespace. Se quiser acessar as funções de um módulo por um nome em comum, use `import * as`:
+
+```ts
+// main.ts — usando o matematica.ts do início da aula
+import * as Matematica from "./matematica";
+
+Matematica.somar(2, 3); // 5
+```
+
+Esse import agrupa os exports do módulo em `Matematica`; ele não declara um `namespace` do TypeScript.
+
+Referências: [Namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html) e [Namespaces e módulos](https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html).
+
 ---
 
 [← Classes](./06-classes.md) · [Menu](../../README.md#roadmap) · [Próximo: Exercícios →](./08-exercicios.md)
